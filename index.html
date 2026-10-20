@@ -1,0 +1,1751 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Montajes Técnicos Zambrano y Vargas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Montajes Técnicos Zambrano y Vargas (MTZV): renta y operación de maquinaria, construcción de obras civiles, renta de plantas eléctricas, soldadoras y tubería de perforación para proyectos industriales y petroleros. Tarifas en COP y cotización en línea.">
+<meta name="keywords" content="alquiler de maquinaria, obras civiles, plantas eléctricas, renta de soldadoras, tubería de perforación, oil and gas, MTZV">
+<meta property="og:title" content="Montajes Técnicos Zambrano y Vargas">
+<meta property="og:description" content="Potencia, ingeniería y soluciones para grandes proyectos.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Montajes Técnicos Zambrano y Vargas","alternateName":"MTZV","slogan":"Potencia, ingeniería y soluciones para grandes proyectos.","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Renta y operación de maquinaria"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Construcción de obras civiles"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Renta de plantas eléctricas"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Renta de soldadoras"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tubería de perforación para proyectos petroleros"}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+/* Layout: full-bleed bands alternating petróleo oscuro (operación) y papel técnico (información), contenido en carril de 1240px. */
+:root{
+  --petrol:#0a1b26; --petrol-2:#0f2737; --petrol-3:#163a51; --graphite:#1d262d;
+  --steel:#93a7b4; --steel-2:#c6d2d9; --mist:#e8eef1;
+  --paper:#eceff1; --paper-2:#dde4e8; --card:#ffffff; --ink:#0c1820; --ink-2:#405260;
+  --safety:#f26a1b; --safety-2:#ff8a45; --on-safety:#1c0900;
+  --ok:#1f8f5f; --ok-bg:#dff3e9; --err:#c63d30; --warn:#b26a00; --warn-bg:#fff1d6;
+  --wa:#128c4a;
+  --line:rgba(255,255,255,.12); --line-ink:rgba(12,24,32,.13);
+  --f-display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --hdr:68px;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+dialog:not([open]){display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 12px)}
+body{background:var(--petrol);color:var(--mist);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--petrol)}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.02;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid var(--safety);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(64px,9vw,120px)}
+.band-light{background:var(--paper);color:var(--ink);color-scheme:light}
+.band-graphite{background:var(--graphite)}
+.eyebrow{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--safety);display:flex;align-items:center;gap:10px}
+.band-light .eyebrow{color:#b3470b}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+.h2{font-size:clamp(2.3rem,5vw,3.9rem);font-weight:800;text-transform:uppercase}
+.lead{font-size:1.08rem;max-width:62ch;color:var(--steel-2)}
+.band-light .lead{color:var(--ink-2)}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head.split{grid-template-columns:1fr auto;align-items:end}
+@media (max-width:820px){.sec-head.split{grid-template-columns:1fr}}
+.mono{font-family:var(--f-mono)}
+.num{font-variant-numeric:tabular-nums}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{--c:var(--safety);display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:.85em 1.35em;border:0;cursor:pointer;font-weight:600;font-size:.95rem;letter-spacing:.02em;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--safety);color:var(--on-safety)}
+.btn-primary:hover{background:var(--safety-2);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0f7a40;transform:translateY(-2px)}
+.btn-dark{background:var(--petrol-2);color:#fff}
+.btn-dark:hover{background:var(--petrol-3);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line-ink)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-sm{padding:.6em 1em;font-size:.86rem}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.icon-btn{display:inline-grid;place-items:center;width:42px;height:42px;border:0;border-radius:2px;background:transparent;color:inherit;cursor:pointer;position:relative}
+.icon-btn:hover{background:rgba(255,255,255,.08)}
+.icon-btn svg{width:22px;height:22px}
+
+/* Header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+.hdr.scrolled{background:rgba(10,27,38,.93);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.hdr-in{height:var(--hdr);display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;min-width:0}
+.brand svg{width:42px;height:42px;flex:none}
+.brand-t{display:grid;line-height:1}
+.brand-t b{font-family:var(--f-display);font-weight:900;font-size:1.55rem;letter-spacing:.04em}
+.brand-t small{font-family:var(--f-mono);font-size:.56rem;letter-spacing:.14em;color:var(--steel);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 12px;color:var(--steel-2);position:relative}
+.nav a:hover{color:#fff}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--safety);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.hdr-actions{display:flex;align-items:center;gap:6px}
+.badge{position:absolute;top:3px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--safety);color:var(--on-safety);font:600 .7rem/18px var(--f-mono);text-align:center}
+.badge[data-n="0"]{display:none}
+.menu-btn{display:none}
+@media (max-width:1060px){
+  .nav{position:fixed;top:calc(var(--hdr) + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;background:var(--petrol);padding:12px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .3s;margin:0}
+  .nav.open{transform:none}
+  .nav a{padding:14px 4px;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  .menu-btn{display:inline-grid}
+  .hdr-cta{display:none}
+  .hdr-actions{margin-left:auto}
+}
+
+/* Hero */
+.hero{position:relative;min-height:clamp(600px,88svh,820px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(6,16,23,.92) 0%,rgba(6,16,23,.72) 42%,rgba(6,16,23,.15) 75%),linear-gradient(0deg,rgba(6,16,23,.9) 0%,rgba(6,16,23,0) 40%)}
+.hero-in{padding-top:calc(var(--hdr) + 72px);padding-bottom:56px;width:100%}
+.hero h1{font-size:clamp(2.7rem,7.4vw,6.6rem);font-weight:900;text-transform:uppercase;max-width:13ch;line-height:.92;margin-top:20px}
+.hero h1 span{display:block;color:var(--safety)}
+.hero .slogan{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);margin-top:22px;color:#fff;max-width:30ch}
+.hero .lead{margin-top:14px;color:var(--steel-2)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.illus-tag{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:calc(var(--hdr) + env(safe-area-inset-top,0px) + 14px);font:500 .66rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.62);background:rgba(0,0,0,.35);padding:7px 9px;z-index:2}
+@media (max-width:700px){.hero::after{background:linear-gradient(0deg,rgba(6,16,23,.96) 0%,rgba(6,16,23,.7) 55%,rgba(6,16,23,.82) 100%)}.illus-tag{font-size:.55rem;max-width:62vw;line-height:1.3}}
+.hazard{height:12px;background:repeating-linear-gradient(-45deg,var(--safety) 0 18px,#140c08 18px 36px)}
+.strip{background:var(--petrol-2);border-bottom:1px solid var(--line)}
+.strip-in{display:grid;grid-template-columns:repeat(5,1fr);}
+.strip a{display:flex;align-items:center;gap:12px;padding:22px 16px;text-decoration:none;border-right:1px solid var(--line);color:var(--steel-2);font-size:.9rem;font-weight:500;transition:background .2s,color .2s;min-width:0}
+.strip a:first-child{border-left:1px solid var(--line)}
+.strip a:hover{background:var(--petrol-3);color:#fff}
+.strip svg{width:28px;height:28px;flex:none;color:var(--safety)}
+@media (max-width:900px){.strip-in{grid-template-columns:1fr 1fr}.strip a{border-bottom:1px solid var(--line)}.strip a:nth-child(odd){border-left:1px solid var(--line)}.strip a:last-child{grid-column:1/-1}}
+
+/* Intro / razones */
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:900px){.intro{grid-template-columns:1fr}}
+.intro-copy{display:grid;gap:18px}
+.intro-copy p{color:var(--steel-2);max-width:60ch}
+.plate{position:relative;background:var(--petrol-2);border:1px solid var(--line);padding:28px}
+.plate::before,.plate::after,.plate i::before,.plate i::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#6c8190,#23333e)}
+.plate::before{top:10px;left:10px}.plate::after{top:10px;right:10px}.plate i::before{bottom:10px;left:10px}.plate i::after{bottom:10px;right:10px}
+.plate dl{display:grid;gap:0;margin:0}
+.plate dl div{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.plate dl div:last-child{border-bottom:0}
+.plate dt{font:500 .72rem/1.6 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--steel);min-width:110px}
+.plate dd{margin:0;font-weight:500}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(48px,7vw,80px)}
+@media (max-width:900px){.reasons{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.reasons{grid-template-columns:1fr}}
+.reason{background:var(--petrol);padding:28px;display:grid;gap:10px;align-content:start;transition:background .25s}
+.reason:hover{background:var(--petrol-2)}
+.reason svg{width:30px;height:30px;color:var(--safety)}
+.reason h3{font-size:1.45rem;font-weight:700;text-transform:uppercase}
+.reason p{color:var(--steel-2);font-size:.95rem}
+
+/* Catálogo */
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:28px}
+.search{position:relative;flex:1 1 280px;max-width:420px}
+.search svg{position:absolute;left:14px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--ink-2)}
+.search input{width:100%;padding:13px 14px 13px 42px;border:1.5px solid var(--line-ink);background:var(--card);color:var(--ink);border-radius:2px}
+.search input:focus{border-color:var(--ink);outline:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line-ink);background:transparent;color:var(--ink-2);padding:8px 14px;border-radius:999px;font-size:.86rem;font-weight:500;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.dark-chips .chip{border-color:var(--line);color:var(--steel-2)}
+.dark-chips .chip:hover{border-color:#fff;color:#fff}
+.dark-chips .chip[aria-pressed="true"]{background:var(--safety);border-color:var(--safety);color:var(--on-safety)}
+.grid-svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:24px}
+.svc{background:var(--card);border:1px solid var(--line-ink);display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s;min-width:0}
+.svc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--safety);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 22px 40px -22px rgba(10,27,38,.45)}
+.svc:hover::after{transform:scaleX(1)}
+.media{position:relative;aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--petrol)}
+.media canvas,.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.svc:hover .media canvas,.svc:hover .media img{transform:scale(1.045)}
+.media .tag{position:absolute;left:12px;top:12px;background:rgba(10,27,38,.82);color:#fff;font:500 .68rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 9px;display:flex;gap:7px;align-items:center}
+.media .tag svg{width:14px;height:14px;color:var(--safety)}
+.media .illus{position:absolute;right:10px;bottom:10px;font:500 .6rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:5px 7px}
+.svc-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.svc h3{font-size:1.65rem;font-weight:800;text-transform:uppercase;color:var(--ink)}
+.svc p{color:var(--ink-2);font-size:.95rem}
+.from{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:12px;border-top:1px dashed var(--line-ink)}
+.from small{font:500 .7rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.from b{font:600 1.15rem var(--f-mono);color:var(--ink)}
+.svc-btns{display:flex;flex-wrap:wrap;gap:8px}
+.empty{padding:40px;text-align:center;border:1.5px dashed var(--line-ink);color:var(--ink-2)}
+
+/* Tarifas */
+.rates{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+@media (max-width:1060px){.rates{grid-template-columns:1fr}}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--petrol-2)}
+table.rt{width:100%;border-collapse:collapse;min-width:640px}
+.rt th,.rt td{padding:16px 16px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.rt th{font:500 .7rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--steel);background:rgba(0,0,0,.18)}
+.rt th:first-child,.rt td:first-child{text-align:left}
+.rt td{font-family:var(--f-mono);font-size:.92rem;color:var(--steel-2)}
+.rt td:first-child{font-family:var(--f-body);font-weight:600;color:#fff;font-size:.95rem}
+.rt tbody tr{cursor:pointer;transition:background .2s}
+.rt tbody tr:hover{background:rgba(255,255,255,.04)}
+.rt tbody tr.sel{background:rgba(242,106,27,.1)}
+.rt tbody tr.sel td:first-child{box-shadow:inset 3px 0 0 var(--safety)}
+.rt .ic{display:inline-flex;align-items:center;gap:10px}
+.rt .ic svg{width:20px;height:20px;color:var(--safety);flex:none}
+.rt .q{display:inline-block;margin-left:6px;font:500 .62rem var(--f-mono);letter-spacing:.08em;padding:3px 6px;border:1px solid rgba(242,106,27,.5);color:var(--safety);vertical-align:middle;text-transform:uppercase}
+.disc{display:flex;gap:10px;margin-top:16px;font-size:.86rem;color:var(--steel);max-width:80ch}
+.disc svg{width:18px;height:18px;flex:none;color:var(--safety);margin-top:2px}
+.calc{background:var(--paper);color:var(--ink);color-scheme:light;padding:26px;display:grid;gap:18px;position:relative;border-top:4px solid var(--safety)}
+.calc h3{font-size:1.75rem;font-weight:800;text-transform:uppercase}
+.field{display:grid;gap:6px;min-width:0}
+.field>span,.lbl{font:500 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.field input,.field select,.field textarea{width:100%;padding:12px 12px;border:1.5px solid var(--line-ink);background:var(--card);color:var(--ink);border-radius:2px;min-width:0}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px rgba(242,106,27,.35)}
+.field textarea{min-height:110px;resize:vertical}
+.field .err{font-size:.8rem;color:var(--err);min-height:0}
+.field [aria-invalid="true"]{border-color:var(--err)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--line-ink);background:var(--card)}
+@media (max-width:420px){.seg{grid-template-columns:1fr 1fr}}
+.seg button{border:0;background:transparent;padding:10px 6px;cursor:pointer;display:grid;gap:2px;color:var(--ink-2);border-right:1px solid var(--line-ink);transition:background .2s}
+.seg button:last-child{border-right:0}
+.seg button b{font-size:.88rem;color:var(--ink)}
+.seg button small{font:500 .7rem var(--f-mono)}
+.seg button[aria-checked="true"]{background:var(--ink);color:var(--steel-2)}
+.seg button[aria-checked="true"] b{color:var(--safety)}
+.stepper{display:flex;border:1.5px solid var(--line-ink);background:var(--card)}
+.stepper button{width:44px;border:0;background:transparent;cursor:pointer;font-size:1.2rem;color:var(--ink)}
+.stepper button:hover{background:var(--paper-2)}
+.stepper input{border:0!important;text-align:center;box-shadow:none!important;font-family:var(--f-mono)}
+.hint{font-size:.78rem;color:var(--ink-2)}
+.total-box{background:var(--petrol);color:#fff;padding:18px 20px;display:grid;gap:4px}
+.total-box .lbl{color:var(--steel)}
+.total-box b{font:600 clamp(1.6rem,3vw,2.1rem) var(--f-mono);color:var(--safety);letter-spacing:-.01em}
+.total-box small{font:400 .8rem var(--f-mono);color:var(--steel-2)}
+.custom-q{background:var(--warn-bg);color:#5b3a00;padding:12px 14px;font-size:.86rem;display:flex;gap:10px;align-items:flex-start}
+.custom-q svg{width:18px;height:18px;flex:none;margin-top:2px}
+.calc-btns{display:flex;flex-wrap:wrap;gap:10px}
+.calc-btns .btn{flex:1 1 auto}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.gi{grid-column:span 4;position:relative;overflow:hidden;background:var(--petrol-2);aspect-ratio:4/3;max-width:100%;cursor:pointer;border:0;padding:0;text-align:left;color:#fff}
+.gi.wide{grid-column:span 8;aspect-ratio:auto}
+@media (max-width:900px){.gi,.gi.wide{grid-column:span 6;aspect-ratio:4/3}}
+@media (max-width:560px){.gi,.gi.wide{grid-column:span 12}}
+.gi canvas{position:absolute;inset:0;width:100%;height:100%;transition:transform .7s}
+.gi:hover canvas{transform:scale(1.05)}
+.gi .cap{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(0deg,rgba(6,16,23,.92),rgba(6,16,23,0));display:grid;gap:4px}
+.gi .cap small{font:500 .66rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--safety)}
+.gi .cap b{font-family:var(--f-display);font-size:1.4rem;font-weight:700;text-transform:uppercase;line-height:1.05}
+.gi .illus{position:absolute;right:10px;top:10px;font:500 .6rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);background:rgba(0,0,0,.4);padding:5px 7px}
+.gi[hidden]{display:none!important}
+
+/* Nosotros */
+.about{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.about .blk{background:var(--card);border:1px solid var(--line-ink);padding:28px;display:grid;gap:12px;align-content:start;min-width:0}
+.about .blk h3{font-size:1.7rem;font-weight:800;text-transform:uppercase}
+.about .blk p,.about .blk li{color:var(--ink-2)}
+.about .who{grid-column:span 7;background:var(--petrol);color:#fff;border:0}
+.about .who p{color:var(--steel-2);font-size:1.04rem}
+.about .who h3{font-size:2.2rem}
+.about .mv{grid-column:span 5;display:grid;gap:24px;background:none;border:0;padding:0}
+.about .val{grid-column:span 12}
+.about .s4{grid-column:span 4}
+@media (max-width:980px){.about .who,.about .mv{grid-column:span 12}.about .s4{grid-column:span 12}}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-ink);margin-top:8px}
+@media (max-width:760px){.vals{grid-template-columns:1fr}}
+.vals div{padding:18px 18px 18px 0;border-bottom:1px solid var(--line-ink);display:grid;gap:4px}
+.vals b{font-family:var(--f-display);font-size:1.25rem;text-transform:uppercase;color:var(--ink)}
+.vals span{font-size:.92rem;color:var(--ink-2)}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:.95rem}
+.ticks li::before{content:"";width:12px;height:12px;margin-top:6px;background:var(--safety);clip-path:polygon(0 0,100% 50%,0 100%)}
+.note{font:400 .8rem var(--f-mono);color:var(--ink-2);background:var(--paper-2);padding:10px 12px}
+
+/* Cotización */
+.quote{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+@media (max-width:1000px){.quote{grid-template-columns:1fr}}
+.form{background:var(--card);border:1px solid var(--line-ink);padding:clamp(20px,3vw,32px);display:grid;gap:16px}
+.form .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.form .grid{grid-template-columns:1fr}}
+.form .full{grid-column:1/-1}
+.req{color:var(--err)}
+.summary{background:var(--petrol);color:#fff;padding:24px;display:grid;gap:14px;position:sticky;top:calc(var(--hdr) + 20px)}
+.summary h3{font-size:1.5rem;text-transform:uppercase;font-weight:800}
+.sum-lines{display:grid;gap:0}
+.sum-line{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.sum-line small{display:block;color:var(--steel);font:400 .76rem var(--f-mono);margin-top:2px}
+.sum-line b{font:500 .9rem var(--f-mono)}
+.tot{display:grid;gap:6px;font-family:var(--f-mono);font-size:.88rem}
+.tot div{display:flex;justify-content:space-between;gap:12px;color:var(--steel-2)}
+.tot .grand{color:#fff;font-size:1.12rem;font-weight:600;padding-top:8px;border-top:1px solid var(--line)}
+.tot .grand span:last-child{color:var(--safety)}
+.form-status{padding:14px 16px;font-size:.92rem;display:flex;gap:10px;align-items:flex-start}
+.form-status.ok{background:var(--ok-bg);color:#0c4a31}
+.form-status.warn{background:var(--warn-bg);color:#5b3a00}
+.form-status svg{width:20px;height:20px;flex:none}
+.form-btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.cinfo{display:grid;gap:0;border:1px solid var(--line)}
+.cinfo>div{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px;border-bottom:1px solid var(--line);align-items:start}
+.cinfo>div:last-child{border-bottom:0}
+.cinfo svg{width:24px;height:24px;color:var(--safety);margin-top:2px}
+.cinfo small{display:block;font:500 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.cinfo span{font-weight:500;word-break:break-word}
+.pending{display:inline-block;font:500 .72rem var(--f-mono);color:var(--safety);border:1px dashed rgba(242,106,27,.55);padding:3px 7px;margin-top:4px}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.socials a,.socials span{font-size:.86rem;text-decoration:none;border:1px solid var(--line);padding:6px 10px}
+.contact .form{background:var(--petrol-2);border-color:var(--line);color:#fff;color-scheme:dark}
+.contact .field>span{color:var(--steel)}
+.contact .field input,.contact .field textarea{background:var(--petrol);border-color:var(--line);color:#fff}
+.contact .field input:focus,.contact .field textarea:focus{border-color:var(--safety)}
+
+/* Footer */
+footer{background:#06121a;padding-block:48px 28px;color:var(--steel)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media (max-width:760px){.foot{grid-template-columns:1fr}}
+.foot h4{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:12px;font-weight:500}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot a{text-decoration:none;font-size:.92rem}
+.foot a:hover{color:var(--safety)}
+.foot-b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem}
+.linkbtn{background:none;border:0;color:inherit;cursor:pointer;padding:0;font-size:.92rem;text-align:left}
+.linkbtn:hover{color:var(--safety)}
+
+/* WhatsApp flotante */
+.wa-fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;padding:14px;border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.55);transition:transform .2s}
+.wa-fab:hover{transform:scale(1.06)}
+.wa-fab svg{width:28px;height:28px}
+.wa-fab span{font-weight:600;font-size:.9rem;padding-right:6px}
+@media (max-width:640px){.wa-fab span{display:none}}
+
+/* Dialogs */
+dialog{border:0;padding:0;max-width:none;max-height:none;color:var(--ink);background:var(--paper);color-scheme:light}
+dialog::backdrop{background:rgba(4,12,18,.72);backdrop-filter:blur(3px)}
+.dlg{width:min(860px,calc(100vw - 24px));max-height:calc(100dvh - 32px);margin:auto;overflow:auto}
+.dlg-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;background:var(--petrol);color:#fff;position:sticky;top:0;z-index:2}
+.dlg-h h2{font-size:1.5rem;text-transform:uppercase;font-weight:800}
+.dlg-b{padding:22px;display:grid;gap:18px}
+.dlg-f{padding:16px 22px;border-top:1px solid var(--line-ink);display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;background:var(--paper-2);position:sticky;bottom:0}
+.drawer{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(460px,100vw);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer[open]{animation:slide .3s ease}
+@keyframes slide{from{transform:translateX(40px);opacity:.4}}
+.drawer .dlg-h{position:static}
+.drawer-body{flex:1;overflow:auto;padding:18px;display:grid;gap:14px;align-content:start}
+.ci{background:var(--card);border:1px solid var(--line-ink);padding:16px;display:grid;gap:12px}
+.ci-top{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start}
+.ci-top b{font-weight:600;line-height:1.3}
+.ci-top small{display:block;font:400 .74rem var(--f-mono);color:var(--ink-2);margin-top:4px}
+.ci-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:10px}
+.ci-grid .field input,.ci-grid .field select{padding:9px 8px;font-size:.9rem}
+.ci-price{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--f-mono);font-size:.82rem;color:var(--ink-2)}
+.ci-price b{font-size:1.05rem;color:var(--ink)}
+.rm{border:0;background:none;color:var(--ink-2);cursor:pointer;padding:6px;font-size:.8rem;text-decoration:underline}
+.rm:hover{color:var(--err)}
+.drawer-foot{padding:18px;border-top:1px solid var(--line-ink);display:grid;gap:12px;background:var(--card)}
+.drawer-foot .tot div{color:var(--ink-2)}
+.drawer-foot .tot .grand{color:var(--ink);border-color:var(--line-ink)}
+.drawer-foot .tot .grand span:last-child{color:var(--ink)}
+.cart-empty{text-align:center;padding:48px 16px;color:var(--ink-2);display:grid;gap:14px;justify-items:center}
+.cart-empty svg{width:56px;height:56px;color:var(--steel)}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:720px){.detail{grid-template-columns:1fr}}
+.detail .media{aspect-ratio:4/3}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-ink);border:1px solid var(--line-ink)}
+.pgrid div{background:var(--card);padding:12px 14px;display:grid;gap:2px}
+.pgrid small{font:500 .66rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.pgrid b{font:600 1rem var(--f-mono)}
+.steps{display:flex;gap:0;border-bottom:1px solid var(--line-ink);background:var(--card);padding:0 22px;overflow-x:auto}
+.steps li{list-style:none;padding:14px 16px 12px 0;margin-right:16px;font:500 .78rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-bottom:3px solid transparent;white-space:nowrap}
+.steps li.on{color:var(--ink);border-color:var(--safety)}
+.steps li.done{color:var(--ok)}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:600px){.opts{grid-template-columns:1fr}}
+.opt{position:relative;display:grid;gap:4px;padding:14px;border:1.5px solid var(--line-ink);background:var(--card);cursor:pointer}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt b{font-size:.98rem}
+.opt small{font-size:.78rem;color:var(--ink-2)}
+.opt:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink),0 0 0 3px rgba(242,106,27,.35)}
+.opt:has(input:focus-visible){outline:2px solid var(--safety);outline-offset:2px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:500 .7rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px}
+.pill.demo{background:var(--warn-bg);color:#6b4500}
+.pill.okp{background:var(--ok-bg);color:#0c4a31}
+.pill.pend{background:var(--paper-2);color:var(--ink-2)}
+.confirm{display:grid;gap:14px;justify-items:start}
+.confirm .refno{font:600 1.5rem var(--f-mono);color:var(--ink)}
+.doc{background:#fff;border:1px solid var(--line-ink);box-shadow:0 20px 40px -24px rgba(0,0,0,.35);padding:clamp(18px,4vw,40px);display:grid;gap:22px;font-size:.92rem}
+.doc-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:3px solid var(--safety)}
+.doc-h .brand{color:var(--ink)}
+.doc-h .brand-t small{color:var(--ink-2)}
+.doc-meta{text-align:right;font-family:var(--f-mono);font-size:.82rem;display:grid;gap:3px}
+.doc-meta b{font-family:var(--f-display);font-size:1.6rem;text-transform:uppercase;letter-spacing:.02em}
+.doc-cli{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px 24px}
+.doc-cli div{display:grid}
+.doc-cli small{font:500 .66rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.doc-tbl{overflow-x:auto}
+.doc table{width:100%;border-collapse:collapse;min-width:560px}
+.doc th,.doc td{padding:10px 8px;border-bottom:1px solid var(--line-ink);text-align:right;font-variant-numeric:tabular-nums}
+.doc th{font:500 .66rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--paper)}
+.doc th:first-child,.doc td:first-child{text-align:left}
+.doc-tot{justify-self:end;min-width:min(300px,100%);display:grid;gap:6px;font-family:var(--f-mono)}
+.doc-tot div{display:flex;justify-content:space-between;gap:20px}
+.doc-tot .grand{font-weight:600;font-size:1.08rem;border-top:2px solid var(--ink);padding-top:8px}
+.doc-foot{font-size:.8rem;color:var(--ink-2);border-top:1px solid var(--line-ink);padding-top:14px;display:grid;gap:6px}
+
+/* Admin */
+.admin{width:100vw;height:100dvh;max-height:100dvh;margin:0;display:flex;flex-direction:column;background:var(--paper);padding-top:env(safe-area-inset-top,0px)}
+.admin .dlg-h{position:static}
+.admin-tabs{display:flex;gap:0;background:var(--card);border-bottom:1px solid var(--line-ink);overflow-x:auto;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+.admin-tabs button{border:0;background:none;padding:14px 16px;font:500 .8rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+.admin-tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--safety)}
+.admin-body{flex:1;overflow:auto;padding-block:24px 60px}
+.admin-body .wrap{display:grid;gap:20px}
+.adm-card{background:var(--card);border:1px solid var(--line-ink);padding:20px;display:grid;gap:16px;min-width:0}
+.adm-card h3{font-size:1.4rem;text-transform:uppercase}
+.adm-svc{display:grid;grid-template-columns:180px 1fr;gap:18px}
+@media (max-width:720px){.adm-svc{grid-template-columns:1fr}}
+.adm-svc .media{aspect-ratio:4/3}
+.adm-rates{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:640px){.adm-rates{grid-template-columns:1fr 1fr}}
+.st-tbl{overflow-x:auto}
+.st-tbl table{width:100%;border-collapse:collapse;min-width:620px;font-size:.9rem}
+.st-tbl th,.st-tbl td{padding:10px;border-bottom:1px solid var(--line-ink);text-align:left;vertical-align:top}
+.st-tbl th{font:500 .68rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.st-tbl select{padding:6px;border:1.5px solid var(--line-ink);background:#fff}
+.switch{display:flex;align-items:center;gap:10px;font-size:.92rem;cursor:pointer}
+.switch input{width:18px;height:18px;accent-color:var(--ink)}
+.restricted{max-width:560px;margin:60px auto;text-align:center;display:grid;gap:14px;justify-items:center;padding:0 16px}
+.restricted svg{width:56px;height:56px;color:var(--ink-2)}
+
+/* Toast */
+.toasts{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:100;display:grid;gap:8px;width:min(440px,calc(100vw - 32px))}
+.toast{background:var(--ink);color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.6);border-left:4px solid var(--safety);animation:tin .3s ease;font-size:.92rem}
+.toast.err{border-left-color:var(--err)}
+@keyframes tin{from{transform:translateY(12px);opacity:0}}
+
+/* Motion */
+.reveal.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:.001;transform:translateY(26px)}}
+.hero .anim{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.hero .anim.d1{animation-delay:.12s}.hero .anim.d2{animation-delay:.24s}.hero .anim.d3{animation-delay:.36s}.hero .anim.d4{animation-delay:.48s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#inicio" aria-label="MTZV, inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5 42.6 13.25v21.5L24 45.5 5.4 34.75v-21.5Z" fill="#0f2737" stroke="#f26a1b" stroke-width="2.4"/><path d="M14.5 32.5V16l9.5 8.6 9.5-8.6v16.5" fill="none" stroke="#f26a1b" stroke-width="3.4" stroke-linejoin="miter" stroke-linecap="square"/><path d="M14.5 36.5h19" stroke="#93a7b4" stroke-width="2"/></svg>
+      <span class="brand-t"><b>MTZV</b><small>Montajes Técnicos Zambrano y Vargas</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#cotizacion">Cotización</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="icon-btn" id="btn-search" aria-label="Buscar servicios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+      <button class="icon-btn" id="btn-cart" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2.5l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg><span class="badge" id="cart-n" data-n="0">0</span></button>
+      <a class="btn btn-primary btn-sm hdr-cta" href="#cotizacion">Solicitar cotización</a>
+      <button class="icon-btn menu-btn" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" aria-label="Portada">
+  <canvas id="hero-cv" aria-hidden="true"></canvas>
+  <span class="illus-tag">Ilustración · reemplazable por fotografía real</span>
+  <div class="wrap hero-in">
+    <p class="eyebrow anim">Maquinaria · Obra civil · Energía · Soldadura · Oil &amp; Gas</p>
+    <h1 class="anim d1">Montajes Técnicos <span>Zambrano y Vargas</span></h1>
+    <p class="slogan anim d2">Potencia, ingeniería y soluciones para grandes proyectos.</p>
+    <p class="lead anim d3">Ofrecemos soluciones integrales en alquiler y operación de maquinaria, construcción de obras civiles y suministro de equipos especializados para proyectos industriales y petroleros.</p>
+    <div class="hero-btns anim d4">
+      <a class="btn btn-primary" href="#servicios">Explorar servicios <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#cotizacion">Solicitar cotización</a>
+      <a class="btn btn-wa js-wa" href="https://wa.me/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3Z"/></svg>Contactar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+<div class="hazard" aria-hidden="true"></div>
+<nav class="strip" aria-label="Líneas de servicio"><div class="wrap strip-in" id="strip"></div></nav>
+
+<section class="band" id="empresa" aria-labelledby="t-emp">
+  <div class="wrap">
+    <div class="intro">
+      <div class="intro-copy reveal">
+        <p class="eyebrow">Presentación corporativa</p>
+        <h2 class="h2" id="t-emp">Equipo, operación y obra en un solo aliado</h2>
+        <p>MTZV reúne cinco líneas de servicio que normalmente un proyecto contrata por separado: maquinaria con operación, ejecución de obra civil, energía temporal, equipos de soldadura y tubería de perforación. Coordinarlas desde una sola empresa simplifica la logística de campo, la programación y la comunicación con el cliente.</p>
+        <p>Trabajamos con tarifas de referencia publicadas por hora, día, semana y mes, para que cada cliente pueda estimar su presupuesto antes de hablar con el equipo comercial y recibir luego una cotización formal ajustada al alcance real del proyecto.</p>
+        <div class="hero-btns" style="margin-top:8px"><a class="btn btn-primary" href="#nosotros">Conocer la empresa</a><a class="btn btn-ghost" href="#tarifas">Ver tarifas</a></div>
+      </div>
+      <div class="plate reveal"><i></i>
+        <dl>
+          <div><dt>Razón social</dt><dd>Montajes Técnicos Zambrano y Vargas</dd></div>
+          <div><dt>Sigla</dt><dd class="mono">MTZV</dd></div>
+          <div><dt>Líneas</dt><dd>Maquinaria · Obras civiles · Plantas eléctricas · Soldadoras · Tubería de perforación</dd></div>
+          <div><dt>Modalidades</dt><dd>Por hora, día, semana o mes</dd></div>
+          <div><dt>Sectores</dt><dd>Construcción, infraestructura, industria y Oil &amp; Gas</dd></div>
+          <div><dt>Moneda</dt><dd class="mono">COP · pesos colombianos</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="reasons" id="reasons"></div>
+  </div>
+</section>
+
+<section class="band band-light" id="servicios" aria-labelledby="t-srv">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:14px"><p class="eyebrow">Catálogo de servicios</p><h2 class="h2" id="t-srv">Cinco líneas para obra, industria y petróleo</h2></div>
+      <p class="lead">Cada servicio se puede alquilar por hora, día, semana o mes. Revise los detalles, calcule un valor estimado o solicite una cotización.</p>
+    </div>
+    <div class="tools">
+      <label class="search"><span class="sr-only">Buscar servicios</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Buscar: excavadora, planta, soldadura, tubería…" autocomplete="off"></label>
+      <div class="chips" id="cat-chips" role="group" aria-label="Filtrar por categoría"></div>
+    </div>
+    <div class="grid-svc" id="svc-grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="band" id="tarifas" aria-labelledby="t-tar">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:14px"><p class="eyebrow">Tarifas de referencia · COP</p><h2 class="h2" id="t-tar">Calcule su alquiler en segundos</h2></div>
+      <p class="lead">Seleccione un servicio en la tabla o en la calculadora, elija la modalidad, las fechas y la cantidad de equipos. El valor se actualiza al instante.</p>
+    </div>
+    <div class="rates">
+      <div style="min-width:0">
+        <div class="tbl-wrap"><table class="rt" id="rt"><caption class="sr-only">Tarifas de referencia por servicio y modalidad, en pesos colombianos</caption><thead><tr><th scope="col">Servicio</th><th scope="col">Por hora</th><th scope="col">Por día</th><th scope="col">Por semana</th><th scope="col">Por mes</th></tr></thead><tbody></tbody></table></div>
+        <p class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><span>Tarifas de referencia sujetas a disponibilidad, alcance del servicio y confirmación comercial. No constituyen una oferta en firme. Valores antes de impuestos.</span></p>
+      </div>
+      <form class="calc" id="calc" novalidate aria-labelledby="t-calc">
+        <h3 id="t-calc">Calculadora</h3>
+        <label class="field"><span>Servicio</span><select id="c-svc"></select></label>
+        <div class="field"><span id="l-per">Modalidad de alquiler</span><div class="seg" id="c-per" role="radiogroup" aria-labelledby="l-per"></div></div>
+        <div class="row2">
+          <label class="field"><span>Fecha de inicio</span><input type="date" id="c-ini"></label>
+          <label class="field"><span>Fecha de finalización</span><input type="date" id="c-fin"></label>
+        </div>
+        <div class="row2">
+          <label class="field"><span id="l-cant">Días</span><div class="stepper"><button type="button" data-step="cant" data-d="-1" aria-label="Restar">−</button><input id="c-cant" type="number" min="1" step="1" value="1" inputmode="numeric"><button type="button" data-step="cant" data-d="1" aria-label="Sumar">+</button></div></label>
+          <label class="field"><span id="l-unid">Equipos</span><div class="stepper"><button type="button" data-step="unid" data-d="-1" aria-label="Restar">−</button><input id="c-unid" type="number" min="1" step="1" value="1" inputmode="numeric"><button type="button" data-step="unid" data-d="1" aria-label="Sumar">+</button></div></label>
+        </div>
+        <p class="hint" id="c-hint"></p>
+        <div class="total-box" aria-live="polite"><span class="lbl">Valor estimado antes de impuestos</span><b id="c-total" class="num">$ 0</b><small id="c-formula"></small></div>
+        <div class="custom-q" id="c-custom" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 21h20Z"/><path d="M12 10v5M12 18v.4"/></svg><span>Este servicio suele requerir cotización personalizada según planos, volumen de obra o especificación técnica de la tubería. El valor calculado es solo una referencia.</span></div>
+        <div class="calc-btns">
+          <button class="btn btn-dark" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+          <button class="btn btn-line" type="button" id="c-quote">Cotización personalizada</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="band band-graphite" id="proyectos" aria-labelledby="t-pro">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:14px"><p class="eyebrow">Proyectos y operaciones</p><h2 class="h2" id="t-pro">Dónde trabaja nuestro equipo</h2></div>
+      <p class="lead">Galería de referencia por tipo de operación. Las imágenes son ilustrativas y se reemplazarán por fotografías reales de la empresa.</p>
+    </div>
+    <div class="tools dark-chips"><div class="chips" id="gal-chips" role="group" aria-label="Filtrar galería"></div></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="band band-light" id="nosotros" aria-labelledby="t-nos">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Nosotros</p><h2 class="h2" id="t-nos">Una empresa organizada para proyectos exigentes</h2></div>
+    <div class="about">
+      <article class="blk who reveal">
+        <h3>Quiénes somos</h3>
+        <p>Montajes Técnicos Zambrano y Vargas es una empresa de servicios técnicos que alquila y opera maquinaria, ejecuta obras civiles y suministra equipos especializados para proyectos de construcción, industria y el sector Oil &amp; Gas.</p>
+        <p>Nuestro trabajo parte de una idea sencilla: un proyecto avanza cuando el equipo correcto llega a tiempo, opera de forma segura y está respaldado por una empresa que responde. Por eso combinamos disponibilidad de equipos, personal de operación y una comunicación comercial clara desde la primera cotización.</p>
+      </article>
+      <div class="blk mv">
+        <article class="blk reveal"><h3>Misión</h3><p>Proveer maquinaria, equipos y servicios de construcción confiables, con operación segura y atención oportuna, para que nuestros clientes ejecuten sus proyectos en el tiempo, el costo y la calidad que planearon.</p></article>
+        <article class="blk reveal"><h3>Visión</h3><p>Ser un aliado reconocido en proyectos industriales, civiles y petroleros por la seriedad técnica, la seguridad en cada operación y el cumplimiento de lo pactado con cada cliente.</p></article>
+      </div>
+      <article class="blk val reveal">
+        <h3>Nuestros valores</h3>
+        <div class="vals">
+          <div><b>Seguridad primero</b><span>Ninguna actividad justifica poner en riesgo a las personas, los equipos o el entorno.</span></div>
+          <div><b>Cumplimiento</b><span>Lo que se acuerda en la cotización es lo que se entrega en campo.</span></div>
+          <div><b>Transparencia</b><span>Tarifas de referencia publicadas y condiciones claras desde el inicio.</span></div>
+          <div><b>Trabajo en equipo</b><span>Operadores, técnicos y área comercial coordinados con el cliente.</span></div>
+          <div><b>Responsabilidad ambiental</b><span>Uso cuidadoso de combustibles, aceites y residuos en cada frente.</span></div>
+          <div><b>Mejora continua</b><span>Cada proyecto deja aprendizajes que aplicamos en el siguiente.</span></div>
+        </div>
+      </article>
+      <article class="blk s4 reveal">
+        <h3>Compromiso con la seguridad</h3>
+        <ul class="ticks">
+          <li>Inspección preoperacional de equipos antes de cada jornada.</li>
+          <li>Análisis de riesgos de la actividad antes de iniciar labores.</li>
+          <li>Uso de elementos de protección personal acordes con la tarea.</li>
+          <li>Reporte y corrección de condiciones inseguras en campo.</li>
+        </ul>
+      </article>
+      <article class="blk s4 reveal">
+        <h3>Calidad y cumplimiento</h3>
+        <ul class="ticks">
+          <li>Alcance, tiempos y valores definidos por escrito en la cotización.</li>
+          <li>Mantenimiento de equipos para reducir paradas no programadas.</li>
+          <li>Seguimiento comercial durante todo el periodo de alquiler.</li>
+        </ul>
+        <p class="note">Certificaciones y registros: espacio reservado. Se publicarán cuando la empresa suministre los documentos.</p>
+      </article>
+      <article class="blk s4 reveal">
+        <h3>Sector industrial y petrolero</h3>
+        <p>Para locaciones, plantas y frentes industriales ofrecemos maquinaria con operación, energía temporal, soldadura para montajes y mantenimiento, y tubería de perforación en alquiler o suministro, coordinados bajo un mismo contrato.</p>
+        <a class="btn btn-dark btn-sm" href="#cotizacion" style="justify-self:start">Hablar de un proyecto</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band band-light" id="cotizacion" aria-labelledby="t-cot" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:14px"><p class="eyebrow">Cotización personalizada</p><h2 class="h2" id="t-cot">Solicite su cotización formal</h2></div>
+      <p class="lead">Complete los datos del proyecto. Puede generar la cotización en PDF o enviarla por WhatsApp con el resumen de los servicios seleccionados.</p>
+    </div>
+    <div class="quote">
+      <form class="form" id="qform" novalidate>
+        <div class="grid">
+          <label class="field"><span>Nombre del cliente <b class="req">*</b></span><input id="q-nombre" name="nombre" autocomplete="name" required><small class="err"></small></label>
+          <label class="field"><span>Empresa</span><input id="q-empresa" name="empresa" autocomplete="organization"><small class="err"></small></label>
+          <label class="field"><span>Correo electrónico <b class="req">*</b></span><input id="q-email" name="email" type="email" autocomplete="email" required><small class="err"></small></label>
+          <label class="field"><span>Teléfono <b class="req">*</b></span><input id="q-tel" name="tel" type="tel" autocomplete="tel" required placeholder="300 000 0000"><small class="err"></small></label>
+          <label class="field"><span>Servicio requerido <b class="req">*</b></span><select id="q-svc" name="svc" required></select><small class="err"></small></label>
+          <label class="field"><span>Cantidad de equipos</span><input id="q-cant" name="cant" type="number" min="1" value="1" inputmode="numeric"><small class="err"></small></label>
+          <label class="field"><span>Duración estimada</span><input id="q-dur" name="dur" placeholder="Ej.: 3 semanas"><small class="err"></small></label>
+          <label class="field"><span>Fecha requerida</span><input id="q-fecha" name="fecha" type="date"><small class="err"></small></label>
+          <label class="field full"><span>Lugar de ejecución del proyecto <b class="req">*</b></span><input id="q-lugar" name="lugar" required placeholder="Municipio, departamento o locación"><small class="err"></small></label>
+          <label class="field full"><span>Observaciones adicionales</span><textarea id="q-obs" name="obs" placeholder="Alcance, condiciones de acceso, horario de trabajo, especificaciones técnicas…"></textarea></label>
+        </div>
+        <div id="q-status" aria-live="polite"></div>
+        <div class="form-btns">
+          <button class="btn btn-dark" type="submit">Registrar solicitud</button>
+          <button class="btn btn-line" type="button" id="q-preview">Ver cotización formal</button>
+          <a class="btn btn-wa js-wa-quote" href="https://wa.me/" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        </div>
+      </form>
+      <aside class="summary" aria-labelledby="t-sum">
+        <h3 id="t-sum">Resumen de servicios</h3>
+        <div class="sum-lines" id="sum-lines"></div>
+        <div class="tot" id="sum-tot"></div>
+        <a class="btn btn-ghost btn-sm" href="#tarifas">Agregar servicios desde la calculadora</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contacto" aria-labelledby="t-con">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Contacto</p><h2 class="h2" id="t-con">Hablemos de su proyecto</h2></div>
+    <div class="contact">
+      <div class="cinfo" id="cinfo"></div>
+      <form class="form" id="cform" novalidate>
+        <div class="grid">
+          <label class="field"><span>Nombre <b class="req">*</b></span><input id="k-nombre" autocomplete="name" required><small class="err"></small></label>
+          <label class="field"><span>Correo electrónico <b class="req">*</b></span><input id="k-email" type="email" autocomplete="email" required><small class="err"></small></label>
+          <label class="field full"><span>Teléfono</span><input id="k-tel" type="tel" autocomplete="tel"><small class="err"></small></label>
+          <label class="field full"><span>Mensaje <b class="req">*</b></span><textarea id="k-msg" required></textarea><small class="err"></small></label>
+        </div>
+        <div id="k-status" aria-live="polite"></div>
+        <div class="form-btns"><button class="btn btn-primary" type="submit">Enviar mensaje</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div style="display:grid;gap:14px;align-content:start">
+        <a class="brand" href="#inicio" style="color:#fff"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5 42.6 13.25v21.5L24 45.5 5.4 34.75v-21.5Z" fill="#0f2737" stroke="#f26a1b" stroke-width="2.4"/><path d="M14.5 32.5V16l9.5 8.6 9.5-8.6v16.5" fill="none" stroke="#f26a1b" stroke-width="3.4" stroke-linecap="square"/><path d="M14.5 36.5h19" stroke="#93a7b4" stroke-width="2"/></svg><span class="brand-t"><b>MTZV</b><small>Montajes Técnicos Zambrano y Vargas</small></span></a>
+        <p style="max-width:42ch;font-size:.92rem">Potencia, ingeniería y soluciones para grandes proyectos.</p>
+      </div>
+      <div><h4>Servicios</h4><ul id="foot-svc"></ul></div>
+      <div><h4>Empresa</h4><ul>
+        <li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#tarifas">Tarifas</a></li><li><a href="#contacto">Contacto</a></li>
+        <li><button class="linkbtn" id="open-admin">Panel administrativo</button></li>
+      </ul></div>
+    </div>
+    <div class="foot-b"><span>© <span id="yr"></span> Montajes Técnicos Zambrano y Vargas. Todos los derechos reservados.</span><span>Precios en COP · tarifas de referencia</span></div>
+  </div>
+</footer>
+
+<a class="wa-fab js-wa" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3Z"/></svg><span>WhatsApp</span></a>
+
+<!-- Carrito -->
+<dialog class="drawer" id="cart" aria-labelledby="t-cart">
+  <div class="dlg-h"><h2 id="t-cart">Carrito de alquiler</h2><button class="icon-btn" data-close aria-label="Cerrar carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot" id="cart-foot"></div>
+</dialog>
+
+<!-- Detalle -->
+<dialog class="dlg" id="detail" aria-labelledby="t-det">
+  <div class="dlg-h"><h2 id="t-det">Servicio</h2><button class="icon-btn" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dlg-b" id="det-body"></div>
+  <div class="dlg-f" id="det-foot"></div>
+</dialog>
+
+<!-- Checkout -->
+<dialog class="dlg" id="checkout" aria-labelledby="t-chk">
+  <div class="dlg-h"><h2 id="t-chk">Finalizar solicitud</h2><button class="icon-btn" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <ol class="steps" id="chk-steps"><li>1 · Datos</li><li>2 · Pago</li><li>3 · Revisión</li><li>4 · Confirmación</li></ol>
+  <div class="dlg-b" id="chk-body"></div>
+  <div class="dlg-f" id="chk-foot"></div>
+</dialog>
+
+<!-- Cotización formal -->
+<dialog class="dlg" id="qdoc" aria-labelledby="t-qdoc">
+  <div class="dlg-h"><h2 id="t-qdoc">Cotización formal</h2><button class="icon-btn" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dlg-b" id="qdoc-body"></div>
+  <div class="dlg-f" id="qdoc-foot"></div>
+</dialog>
+
+<!-- Admin -->
+<dialog class="admin" id="admin" aria-labelledby="t-adm">
+  <div class="dlg-h"><h2 id="t-adm">Panel administrativo MTZV</h2><button class="icon-btn" data-close aria-label="Cerrar panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="admin-tabs" id="adm-tabs" role="tablist"></div>
+  <div class="admin-body"><div class="wrap" id="adm-body"></div></div>
+</dialog>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+(() => {
+"use strict";
+/* ---------- Utilidades ---------- */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = new Intl.NumberFormat("es-CO", {style:"currency", currency:"COP", maximumFractionDigits:0});
+const money = n => fmt.format(Math.round(Number(n) || 0));
+const clampInt = (v, min = 1, max = 9999) => Math.max(min, Math.min(max, Math.round(Number(v) || min)));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+const use = name => (window.claude && typeof window.claude.use === "function") ? window.claude.use(name).catch(() => null) : Promise.resolve(null);
+const todayISO = () => { const d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); };
+const fechaLarga = d => new Date(d).toLocaleDateString("es-CO", {year:"numeric", month:"long", day:"numeric"});
+const newRef = pre => { const d = new Date(); const p = n => String(n).padStart(2, "0"); return `${pre}-${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${Math.random().toString(36).slice(2,6).toUpperCase()}`; };
+function toast(msg, err) { const t = document.createElement("div"); t.className = "toast" + (err ? " err" : ""); t.textContent = msg; $("#toasts").append(t); setTimeout(() => t.remove(), 4200); }
+
+/* ---------- Iconos ---------- */
+const I = {
+  maquinaria:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2" y="16" width="11" height="4" rx="2"/><path d="M3.5 16v-3.5h6.5V16M6 12.5V9h3.5l.5 3.5M10 13l5-7 5 4-2 3"/><path d="m18 13 2.5 3.5H17"/></svg>',
+  civil:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 21V5M4 5h16M8 5 4 9M12 5v4M12 9h-1.5v3H13.5V9"/><path d="M14 21v-7h6v7M2 21h20M16.5 16.5h1"/></svg>',
+  energia:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2" y="8" width="17" height="11" rx="1"/><path d="M19 11h3v5h-3M5 19v2M16 19v2M11.5 10.5 9 14h3l-2.5 3.5M6 5h4"/></svg>',
+  soldadura:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M3 21 13 11M13 11l2-2 2 2-2 2zM17 7l1.5-1.5M19 10h2M14 5V3M20.5 4.5 19 6"/><path d="M2 21h8"/></svg>',
+  petroleo:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2 7 21M12 2l5 19M9 13h6M8 17h8M10.2 8.5h3.6M5 21h14"/><circle cx="12" cy="2.5" r=".6" fill="currentColor"/></svg>',
+  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>',
+  tag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/></svg>',
+  doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg>',
+  op:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2M8.5 6h7"/></svg>',
+  layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  share:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></svg>',
+  ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>',
+  warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 21h20Z"/><path d="M12 10v5M12 18v.4"/></svg>',
+  cart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2.5l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg>',
+  lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="11" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>'
+};
+
+/* ---------- Catálogo base ---------- */
+const PER = {
+  hora:   {label:"Hora",   plural:"Horas",   one:"hora",   many:"horas",   def:8},
+  dia:    {label:"Día",    plural:"Días",    one:"día",    many:"días",    def:1},
+  semana: {label:"Semana", plural:"Semanas", one:"semana", many:"semanas", def:1},
+  mes:    {label:"Mes",    plural:"Meses",   one:"mes",    many:"meses",   def:1}
+};
+const PKEYS = ["hora","dia","semana","mes"];
+const CATS = [
+  {id:"todas", label:"Todas"},
+  {id:"maquinaria", label:"Maquinaria pesada"},
+  {id:"civil", label:"Construcción civil"},
+  {id:"energia", label:"Energía temporal"},
+  {id:"soldadura", label:"Soldadura industrial"},
+  {id:"petroleo", label:"Sector petrolero"}
+];
+const META = [
+  {id:"maquinaria", cat:"maquinaria", scene:"maquinaria", seed:3, unid:["Equipo","Equipos"], cotizable:false,
+   kw:"maquinaria pesada excavadora retroexcavadora movimiento tierra operador alquiler renta",
+   incluye:["Equipo con operador, según la modalidad acordada","Programación por hora, día, semana o mes","Apoyo en la planeación de la operación en campo"],
+   usos:["Movimiento de tierras y adecuación de terrenos","Excavaciones para redes y cimentaciones","Apoyo a montajes y frentes industriales"]},
+  {id:"civil", cat:"civil", scene:"civil", seed:5, unid:["Frente de obra","Frentes de obra"], cotizable:true,
+   kw:"construcción obras civiles infraestructura adecuaciones concreto estructura edificación",
+   incluye:["Ejecución de obra según alcance y planos aprobados","Personal de obra y coordinación de frentes","Cotización personalizada por cantidades de obra"],
+   usos:["Adecuaciones para plantas y locaciones","Infraestructura para proyectos comerciales","Bases, placas y obras complementarias"]},
+  {id:"energia", cat:"energia", scene:"energia", seed:7, unid:["Planta","Plantas"], cotizable:false,
+   kw:"plantas eléctricas generador energía temporal respaldo diésel iluminación",
+   incluye:["Planta eléctrica para suministro temporal","Entrega e instalación coordinadas con el cliente","Capacidad definida según la carga requerida"],
+   usos:["Energía para obras sin acometida","Respaldo en instalaciones industriales","Eventos y proyectos especiales"]},
+  {id:"soldadura", cat:"soldadura", scene:"soldadura", seed:11, unid:["Soldadora","Soldadoras"], cotizable:false,
+   kw:"soldadoras soldadura equipos montaje metálico mantenimiento estructura",
+   incluye:["Equipo de soldadura en alquiler","Modalidades desde una hora","Accesorios según el tipo de trabajo, a confirmar"],
+   usos:["Mantenimiento industrial","Montajes de estructuras metálicas","Reparaciones en campo"]},
+  {id:"tuberia", cat:"petroleo", scene:"petroleo", seed:13, unid:["Lote","Lotes"], cotizable:true,
+   kw:"tubería perforación oil gas petróleo pozo drill pipe suministro locación",
+   incluye:["Alquiler o suministro de tubería de perforación","Especificación técnica definida con el cliente","Cotización personalizada por cantidad y referencia"],
+   usos:["Operaciones de perforación","Proyectos del sector Oil & Gas","Reposición de tubería en locación"]}
+];
+const DEFAULTS = {
+  servicios:{
+    maquinaria:{nombre:"Renta y operación de maquinaria", desc:"Servicio de alquiler y operación de maquinaria para proyectos de construcción, infraestructura e industria.", hora:110000, dia:880000, semana:5000000, mes:18000000, activo:true, img:""},
+    civil:{nombre:"Construcción de obras civiles", desc:"Soluciones para la ejecución de obras civiles, adecuaciones e infraestructura para proyectos industriales y comerciales.", hora:150000, dia:1200000, semana:6500000, mes:24000000, activo:true, img:""},
+    energia:{nombre:"Renta de plantas eléctricas", desc:"Alquiler de plantas eléctricas para suministro de energía temporal en obras, instalaciones industriales y proyectos especiales.", hora:180000, dia:1440000, semana:8000000, mes:28000000, activo:true, img:""},
+    soldadura:{nombre:"Renta de soldadoras", desc:"Alquiler de equipos de soldadura para mantenimiento, montajes metálicos y trabajos industriales.", hora:20000, dia:50000, semana:250000, mes:800000, activo:true, img:""},
+    tuberia:{nombre:"Tubería de perforación para proyectos petroleros", desc:"Soluciones de alquiler y suministro de tubería de perforación para operaciones y proyectos del sector Oil & Gas.", hora:200000, dia:1600000, semana:9000000, mes:32000000, activo:true, img:""}
+  },
+  impuestos:{aplica:true, tasa:19},
+  contacto:{whatsapp:"", telefono:"", email:"", direccion:"", horario:"", facebook:"", instagram:"", linkedin:""}
+};
+const clone = o => JSON.parse(JSON.stringify(o));
+function merge(base, over) {
+  const out = clone(base);
+  if (!over || typeof over !== "object") return out;
+  for (const k of Object.keys(over)) {
+    if (over[k] && typeof over[k] === "object" && !Array.isArray(over[k]) && out[k] && typeof out[k] === "object") out[k] = merge(out[k], over[k]);
+    else if (over[k] !== undefined) out[k] = over[k];
+  }
+  return out;
+}
+let cfg = clone(DEFAULTS);
+const svc = id => { const m = META.find(x => x.id === id); return m ? {...m, ...cfg.servicios[id]} : null; };
+const services = (all) => META.map(m => svc(m.id)).filter(s => all || s.activo !== false);
+const rate = (id, per) => Number(svc(id)?.[per]) || 0;
+const unitWord = (s, n) => n === 1 ? s.unid[0].toLowerCase() : s.unid[1].toLowerCase();
+const perWord = (per, n) => n === 1 ? PER[per].one : PER[per].many;
+
+/* ---------- Estado ---------- */
+const state = {
+  cart: store.get("mtzv_cart", []).filter(i => i && META.some(m => m.id === i.sid) && PER[i.per]),
+  cat:"todas", q:"", gcat:"todas",
+  calc:{sid:"maquinaria", per:"dia", cant:1, unid:1, ini:"", fin:"", auto:false},
+  caps:{user:null, db:null, uid:null, downloads:null, assets:null},
+  chk:{step:0, cli:{}, gw:"wompi", medio:"pse", result:null}
+};
+const saveCart = () => { store.set("mtzv_cart", state.cart); renderCartAll(); };
+const lineTotal = i => rate(i.sid, i.per) * clampInt(i.cant) * clampInt(i.unid);
+function totals(lines) {
+  const sub = lines.reduce((a, l) => a + l.valor, 0);
+  const tasa = cfg.impuestos.aplica ? Number(cfg.impuestos.tasa) || 0 : 0;
+  const iva = Math.round(sub * tasa / 100);
+  return {sub, tasa, iva, total: sub + iva};
+}
+const cartLines = () => state.cart.map(i => { const s = svc(i.sid); return {sid:i.sid, servicio:s.nombre, per:i.per, modalidad:"Por " + PER[i.per].one, cant:clampInt(i.cant), unid:clampInt(i.unid), unidLabel:unitWord(s, clampInt(i.unid)), tarifa:rate(i.sid, i.per), valor:lineTotal(i), cotizable:s.cotizable, ini:i.ini || "", fin:i.fin || ""}; });
+
+/* ---------- Escenas ilustrativas (canvas) ---------- */
+function rng(seed) { let s = (seed * 2654435761) >>> 0 || 1; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+function rr(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+const SKY = {
+  dusk:  ["#07141d","#123247","#2c4a5a","#b8661c","#f2a23a"],
+  amber: ["#0a1620","#1b3646","#5a4a3a","#d27a22","#ffb84a"],
+  night: ["#040b11","#0a1c29","#10293a","#1c3b4f","#35556a"],
+  steel: ["#0b1820","#1a3443","#3c5866","#7e8f93","#c7a46a"]
+};
+function sky(c, w, h, pal, R) {
+  const g = c.createLinearGradient(0, 0, 0, h);
+  g.addColorStop(0, pal[0]); g.addColorStop(.38, pal[1]); g.addColorStop(.62, pal[2]); g.addColorStop(.78, pal[3]); g.addColorStop(.86, pal[4]);
+  c.fillStyle = g; c.fillRect(0, 0, w, h);
+  const sx = w * (.25 + R() * .5), sy = h * .8;
+  const rg = c.createRadialGradient(sx, sy, 0, sx, sy, Math.max(w, h) * .55);
+  rg.addColorStop(0, "rgba(255,190,90,.55)"); rg.addColorStop(.35, "rgba(240,140,40,.18)"); rg.addColorStop(1, "rgba(240,140,40,0)");
+  c.fillStyle = rg; c.fillRect(0, 0, w, h);
+}
+function stars(c, w, h, R, n) { c.fillStyle = "rgba(220,235,245,.7)"; for (let i = 0; i < n; i++) { const r = R() * 1.1 + .2; c.fillRect(R() * w, R() * h * .55, r, r); } }
+function hills(c, w, gy, amp, col, R) {
+  c.fillStyle = col; c.beginPath(); c.moveTo(0, gy);
+  const f1 = 1.5 + R() * 2, f2 = 4 + R() * 3, p = R() * 6;
+  for (let x = 0; x <= w; x += 8) c.lineTo(x, gy - amp * (.55 + .3 * Math.sin(x / w * Math.PI * f1 + p) + .15 * Math.sin(x / w * Math.PI * f2 + p * 2)));
+  c.lineTo(w, gy); c.closePath(); c.fill();
+}
+function ground(c, w, h, gy) {
+  const g = c.createLinearGradient(0, gy, 0, h); g.addColorStop(0, "#0b1b25"); g.addColorStop(1, "#050d12");
+  c.fillStyle = g; c.fillRect(0, gy, w, h - gy);
+  c.strokeStyle = "rgba(242,106,27,.08)"; c.lineWidth = 1;
+  for (let i = 1; i < 6; i++) { const y = gy + (h - gy) * (i / 6) ** 1.6; c.beginPath(); c.moveTo(0, y); c.lineTo(w, y); c.stroke(); }
+}
+function excavator(c, x, gy, s, col, win) {
+  c.save(); c.fillStyle = col; c.strokeStyle = col; c.lineCap = "round"; c.lineJoin = "round";
+  rr(c, x, gy - .55 * s, 3 * s, .55 * s, .27 * s); c.fill();
+  c.fillStyle = "rgba(160,180,190,.18)"; for (let i = 0; i < 5; i++) { c.beginPath(); c.arc(x + .35 * s + i * .58 * s, gy - .27 * s, .13 * s, 0, 7); c.fill(); }
+  c.fillStyle = col;
+  c.fillRect(x + .5 * s, gy - .72 * s, 1.9 * s, .2 * s);
+  rr(c, x - .15 * s, gy - 1.42 * s, 1.1 * s, .72 * s, .22 * s); c.fill();
+  c.fillRect(x + .2 * s, gy - 1.38 * s, 2.3 * s, .68 * s);
+  c.beginPath(); c.moveTo(x + 1.5 * s, gy - 1.35 * s); c.lineTo(x + 1.5 * s, gy - 2.3 * s); c.lineTo(x + 2.2 * s, gy - 2.3 * s); c.lineTo(x + 2.45 * s, gy - 1.35 * s); c.fill();
+  c.fillStyle = win; c.beginPath(); c.moveTo(x + 1.62 * s, gy - 1.55 * s); c.lineTo(x + 1.62 * s, gy - 2.18 * s); c.lineTo(x + 2.12 * s, gy - 2.18 * s); c.lineTo(x + 2.3 * s, gy - 1.55 * s); c.fill();
+  c.fillStyle = col;
+  c.lineWidth = .36 * s; c.beginPath(); c.moveTo(x + 2.25 * s, gy - 1.15 * s); c.quadraticCurveTo(x + 2.7 * s, gy - 3.1 * s, x + 3.55 * s, gy - 3.3 * s); c.stroke();
+  c.lineWidth = .24 * s; c.beginPath(); c.moveTo(x + 3.55 * s, gy - 3.3 * s); c.lineTo(x + 4.45 * s, gy - 1.5 * s); c.stroke();
+  c.lineWidth = .1 * s; c.beginPath(); c.moveTo(x + 2.1 * s, gy - 1.6 * s); c.lineTo(x + 2.75 * s, gy - 2.85 * s); c.stroke();
+  c.beginPath(); c.moveTo(x + 3.3 * s, gy - 3.35 * s); c.lineTo(x + 4.2 * s, gy - 2.1 * s); c.stroke();
+  c.beginPath(); c.moveTo(x + 4.3 * s, gy - 1.75 * s); c.lineTo(x + 4.95 * s, gy - 1.3 * s); c.lineTo(x + 4.75 * s, gy - .62 * s); c.lineTo(x + 4.2 * s, gy - .75 * s); c.lineTo(x + 4.1 * s, gy - 1.35 * s); c.closePath(); c.fill();
+  c.restore();
+}
+function rig(c, x, gy, H, col, beacon) {
+  c.save(); c.strokeStyle = col; c.fillStyle = col; c.lineWidth = Math.max(1, H * .007);
+  const fh = H * .14, bw = H * .16, tw = H * .035, top = gy - H;
+  c.fillRect(x - bw * 1.5, gy - fh, bw * 3, fh * .16);
+  for (let i = -3; i <= 3; i++) { c.beginPath(); c.moveTo(x + i * bw * .48, gy - fh); c.lineTo(x + i * bw * .48, gy); c.stroke(); }
+  c.beginPath(); c.moveTo(x - bw * 1.45, gy); c.lineTo(x - bw * .5, gy - fh); c.moveTo(x + bw * 1.45, gy); c.lineTo(x + bw * .5, gy - fh); c.stroke();
+  c.fillRect(x + bw * .9, gy - fh - H * .07, bw * .7, H * .07);
+  c.lineWidth = Math.max(1.2, H * .01);
+  c.beginPath(); c.moveTo(x - bw, gy - fh); c.lineTo(x - tw, top); c.moveTo(x + bw, gy - fh); c.lineTo(x + tw, top); c.stroke();
+  c.lineWidth = Math.max(.8, H * .0045);
+  const n = 10, L = t => [x - (bw + (tw - bw) * t), x + (bw + (tw - bw) * t), gy - fh - (H - fh) * t];
+  for (let i = 0; i < n; i++) {
+    const [a1, b1, y1] = L(i / n), [a2, b2, y2] = L((i + 1) / n);
+    c.beginPath(); c.moveTo(a1, y1); c.lineTo(b1, y1); c.moveTo(a1, y1); c.lineTo(b2, y2); c.moveTo(b1, y1); c.lineTo(a2, y2); c.stroke();
+  }
+  c.fillRect(x - tw * 1.8, top - H * .03, tw * 3.6, H * .03);
+  c.fillRect(x - tw * .3, top - H * .07, tw * .6, H * .04);
+  c.beginPath(); c.moveTo(x, top); c.lineTo(x, gy - fh - H * .25); c.stroke();
+  c.fillRect(x - tw * .9, gy - fh - H * .28, tw * 1.8, H * .04);
+  for (let i = 0; i < 6; i++) { c.beginPath(); c.moveTo(x - bw * 1.25 - i * H * .012, gy - fh); c.lineTo(x - bw * .45 - i * H * .01, gy - fh - H * .42); c.stroke(); }
+  c.restore();
+  if (beacon) { c.save(); const g = c.createRadialGradient(x, top - H * .07, 0, x, top - H * .07, H * .05 * beacon); g.addColorStop(0, "rgba(255,70,50,.95)"); g.addColorStop(1, "rgba(255,70,50,0)"); c.fillStyle = g; c.beginPath(); c.arc(x, top - H * .07, H * .05 * beacon, 0, 7); c.fill(); c.restore(); }
+}
+function crane(c, x, gy, H, col) {
+  c.save(); c.strokeStyle = col; c.fillStyle = col;
+  const m = H * .045, top = gy - H;
+  c.lineWidth = Math.max(1.2, H * .007);
+  c.beginPath(); c.moveTo(x - m / 2, gy); c.lineTo(x - m / 2, top); c.moveTo(x + m / 2, gy); c.lineTo(x + m / 2, top); c.stroke();
+  c.lineWidth = Math.max(.7, H * .003); c.beginPath();
+  for (let y = gy, k = 0; y > top; y -= m, k++) { c.moveTo(x - m / 2, y); c.lineTo(x + m / 2, y - m); c.moveTo(x - m / 2, y); c.lineTo(x + m / 2, y); }
+  c.stroke();
+  const jl = H * .85, cl = H * .3, jh = m * .9;
+  c.lineWidth = Math.max(1, H * .005);
+  c.beginPath(); c.moveTo(x - cl, top); c.lineTo(x + jl, top); c.moveTo(x - cl, top + jh); c.lineTo(x + jl, top + jh * .4); c.stroke();
+  c.lineWidth = Math.max(.6, H * .0025); c.beginPath();
+  for (let i = 0; i < 26; i++) { const xx = x + jl * i / 26, x2 = x + jl * (i + 1) / 26; c.moveTo(xx, top); c.lineTo(x2, top + jh * (1 - .6 * (i + 1) / 26)); }
+  c.stroke();
+  c.fillRect(x - cl, top + jh * .2, cl * .35, jh * 2.2);
+  c.fillRect(x + m * .6, top + jh, m * 1.4, m * 1.2);
+  c.lineWidth = Math.max(.6, H * .002); c.beginPath(); c.moveTo(x, top - H * .12); c.lineTo(x + jl, top); c.moveTo(x, top - H * .12); c.lineTo(x - cl, top); c.stroke();
+  c.lineWidth = Math.max(1.2, H * .006); c.beginPath(); c.moveTo(x, top); c.lineTo(x, top - H * .12); c.stroke();
+  const hx = x + jl * .62; c.lineWidth = Math.max(.6, H * .002); c.beginPath(); c.moveTo(hx, top + jh * .6); c.lineTo(hx, top + H * .45); c.stroke();
+  c.fillRect(hx - H * .09, top + H * .45, H * .18, H * .018);
+  c.restore();
+}
+function frame(c, x0, x1, gy, H, col, floors, R) {
+  c.save(); c.fillStyle = col; c.strokeStyle = col;
+  const cols = 6, fw = (x1 - x0) / (cols - 1), fh = H / floors, cw = Math.max(2, fw * .09);
+  for (let f = 0; f < floors; f++) {
+    const y = gy - fh * (f + 1), built = f < floors - 1 ? cols : Math.ceil(cols * .55);
+    for (let i = 0; i < cols; i++) { if (f === floors - 1 && i >= built) continue; c.fillRect(x0 + i * fw - cw / 2, y, cw, fh); }
+    const sw = f === floors - 1 ? fw * (built - 1) : x1 - x0;
+    c.fillRect(x0 - cw, y - fh * .07, sw + cw * 2, fh * .1);
+    if (f === floors - 1) { c.lineWidth = Math.max(.7, fh * .02); c.beginPath(); for (let k = 0; k < 7; k++) { const xx = x0 + sw + fw * .2 + k * fw * .15; c.moveTo(xx, y + fh); c.lineTo(xx, y - fh * .5); } c.stroke(); }
+  }
+  c.fillStyle = "rgba(255,180,80,.16)";
+  for (let f = 0; f < floors - 1; f++) for (let i = 0; i < cols - 1; i++) if (R() > .72) c.fillRect(x0 + i * fw + cw, gy - fh * (f + 1) + fh * .12, fw - cw * 2, fh * .8);
+  c.restore();
+}
+function generator(c, x, gy, s, col, lit) {
+  c.save(); c.fillStyle = col;
+  c.fillRect(x - .1 * s, gy - .2 * s, 3.6 * s, .2 * s);
+  rr(c, x, gy - 1.55 * s, 3.4 * s, 1.35 * s, .06 * s); c.fill();
+  c.strokeStyle = "rgba(180,200,210,.16)"; c.lineWidth = Math.max(1, .03 * s);
+  for (let i = 0; i < 9; i++) { c.beginPath(); c.moveTo(x + .25 * s + i * .12 * s, gy - 1.35 * s); c.lineTo(x + .25 * s + i * .12 * s, gy - .45 * s); c.stroke(); }
+  c.beginPath(); c.moveTo(x + 1.75 * s, gy - 1.5 * s); c.lineTo(x + 1.75 * s, gy - .25 * s); c.stroke();
+  c.fillStyle = col; c.fillRect(x + 2.6 * s, gy - 2.3 * s, .18 * s, .8 * s);
+  c.fillStyle = lit; c.fillRect(x + 2.0 * s, gy - 1.25 * s, .45 * s, .28 * s);
+  c.fillStyle = "rgba(200,215,225,.08)"; for (let i = 0; i < 4; i++) { c.beginPath(); c.arc(x + 2.7 * s + i * .25 * s, gy - 2.45 * s - i * .32 * s, (.14 + i * .08) * s, 0, 7); c.fill(); }
+  c.restore();
+}
+function lightTower(c, x, gy, H, col, on) {
+  c.save(); c.fillStyle = col; c.strokeStyle = col;
+  c.fillRect(x - H * .12, gy - H * .1, H * .24, H * .08);
+  c.lineWidth = Math.max(1, H * .012); c.beginPath(); c.moveTo(x, gy - H * .1); c.lineTo(x, gy - H); c.stroke();
+  c.beginPath(); c.moveTo(x - H * .12, gy - H * .02); c.lineTo(x - H * .2, gy); c.moveTo(x + H * .12, gy - H * .02); c.lineTo(x + H * .2, gy); c.stroke();
+  c.fillRect(x - H * .14, gy - H * 1.02, H * .28, H * .03);
+  if (on) {
+    for (let i = 0; i < 4; i++) { const lx = x - H * .105 + i * H * .07; c.fillStyle = "#fff4d0"; c.fillRect(lx - H * .025, gy - H * 1.06, H * .05, H * .04); }
+    const g = c.createRadialGradient(x, gy - H, 0, x, gy - H, H * .9); g.addColorStop(0, "rgba(255,230,160,.35)"); g.addColorStop(1, "rgba(255,230,160,0)");
+    c.fillStyle = g; c.beginPath(); c.moveTo(x - H * .14, gy - H); c.lineTo(x - H * .9, gy); c.lineTo(x + H * .9, gy); c.lineTo(x + H * .14, gy - H); c.fill();
+    const p = c.createRadialGradient(x, gy, 0, x, gy, H * .9); p.addColorStop(0, "rgba(255,220,140,.25)"); p.addColorStop(1, "rgba(255,220,140,0)");
+    c.fillStyle = p; c.beginPath(); c.ellipse(x, gy + H * .05, H * .9, H * .14, 0, 0, 7); c.fill();
+  }
+  c.restore();
+}
+function steel(c, x0, x1, gy, H, col) {
+  c.save(); c.fillStyle = col; c.strokeStyle = col;
+  const n = 4, sp = (x1 - x0) / (n - 1), cw = H * .045;
+  for (let i = 0; i < n; i++) { const x = x0 + i * sp; c.fillRect(x - cw / 2, gy - H, cw, H); c.fillRect(x - cw, gy - H, cw * 2, H * .02); c.fillRect(x - cw, gy - H * .02, cw * 2, H * .02); }
+  c.fillRect(x0 - cw, gy - H - H * .09, x1 - x0 + cw * 2, H * .03); c.fillRect(x0 - cw, gy - H - H * .03, x1 - x0 + cw * 2, H * .03); c.fillRect(x0 - cw, gy - H - H * .07, x1 - x0 + cw * 2, H * .05);
+  c.lineWidth = Math.max(1, H * .012);
+  for (let i = 0; i < n - 1; i++) { const a = x0 + i * sp, b = a + sp; c.beginPath(); c.moveTo(a, gy - H * .05); c.lineTo(b, gy - H * .7); c.moveTo(b, gy - H * .05); c.lineTo(a, gy - H * .7); c.stroke(); }
+  c.restore();
+}
+function sparks(c, px, py, size, R) {
+  c.save();
+  const g = c.createRadialGradient(px, py, 0, px, py, size * 2.2); g.addColorStop(0, "rgba(255,255,240,1)"); g.addColorStop(.12, "rgba(255,220,120,.9)"); g.addColorStop(.4, "rgba(255,150,40,.25)"); g.addColorStop(1, "rgba(255,150,40,0)");
+  c.fillStyle = g; c.beginPath(); c.arc(px, py, size * 2.2, 0, 7); c.fill();
+  for (let i = 0; i < 60; i++) {
+    const a = Math.PI * (.1 + R() * .8) + (R() > .8 ? Math.PI : 0), len = size * (.4 + R() * 1.6);
+    const ex = px + Math.cos(a) * len, ey = py + Math.sin(a) * len + len * len / (size * 4);
+    const lg = c.createLinearGradient(px, py, ex, ey); lg.addColorStop(0, "rgba(255,240,200,.9)"); lg.addColorStop(1, "rgba(255,140,30,0)");
+    c.strokeStyle = lg; c.lineWidth = Math.max(.6, size * .025); c.beginPath(); c.moveTo(px, py); c.lineTo(ex, ey); c.stroke();
+  }
+  c.restore();
+}
+function welder(c, x, gy, s, col, tx, ty) {
+  c.save(); c.fillStyle = col; rr(c, x, gy - 1.1 * s, 1.5 * s, .9 * s, .08 * s); c.fill();
+  c.fillRect(x + .2 * s, gy - 1.3 * s, 1.1 * s, .12 * s);
+  c.beginPath(); c.arc(x + .3 * s, gy - .16 * s, .16 * s, 0, 7); c.arc(x + 1.2 * s, gy - .16 * s, .16 * s, 0, 7); c.fill();
+  c.fillStyle = "rgba(242,106,27,.7)"; c.fillRect(x + .15 * s, gy - 1.0 * s, .35 * s, .2 * s);
+  c.strokeStyle = col; c.lineWidth = Math.max(1, .05 * s); c.beginPath(); c.moveTo(x + 1.5 * s, gy - .6 * s); c.bezierCurveTo(x + 2.6 * s, gy, tx - s, ty + s * 1.5, tx, ty); c.stroke();
+  c.restore();
+}
+function pipes(c, x, gy, r, rows, col) {
+  c.save();
+  for (let row = 0; row < rows; row++) {
+    const n = rows - row, y = gy - r - row * r * 1.72;
+    for (let i = 0; i < n; i++) {
+      const cx = x + i * r * 2 + row * r;
+      c.fillStyle = col; c.beginPath(); c.arc(cx, y, r, 0, 7); c.fill();
+      c.strokeStyle = "rgba(242,106,27,.45)"; c.lineWidth = Math.max(1, r * .14); c.beginPath(); c.arc(cx, y, r * .8, 0, 7); c.stroke();
+      c.fillStyle = "#03080c"; c.beginPath(); c.arc(cx, y, r * .48, 0, 7); c.fill();
+    }
+  }
+  c.fillStyle = col; c.fillRect(x - r * 1.2, gy - r * .3, rows * r * 2 + r * .4, r * .3);
+  c.restore();
+}
+function haze(c, w, h, gy) { const g = c.createLinearGradient(0, gy - h * .25, 0, gy + 4); g.addColorStop(0, "rgba(240,160,70,0)"); g.addColorStop(1, "rgba(240,160,70,.16)"); c.fillStyle = g; c.fillRect(0, gy - h * .25, w, h * .25 + 4); }
+
+const SIL = "#061017", FAR = "rgba(14,36,50,.9)", MID = "#0a1a24", WIN = "rgba(255,190,90,.75)";
+function drawScene(c, w, h, kind, seed, mirror) {
+  const R = rng(seed || 1);
+  c.save();
+  if (mirror) { c.translate(w, 0); c.scale(-1, 1); }
+  const pal = kind === "energia" ? SKY.night : kind === "petroleo" ? SKY.amber : kind === "soldadura" ? SKY.steel : SKY.dusk;
+  sky(c, w, h, pal, R);
+  if (kind === "energia") stars(c, w, h, R, 90);
+  const gy = h * .8, u = Math.min(w * .9, h * 1.6) / 10;
+  hills(c, w, gy, h * .1, "rgba(24,50,66,.75)", R);
+  switch (kind) {
+    case "maquinaria":
+      rig(c, w * .86, gy, h * .5, FAR); crane(c, w * .66, gy, h * .42, FAR);
+      haze(c, w, h, gy); ground(c, w, h, gy);
+      c.fillStyle = SIL; c.beginPath(); c.moveTo(w * .62, gy); c.quadraticCurveTo(w * .76, gy - h * .1, w * .92, gy); c.fill();
+      excavator(c, w * .14, gy + u * .15, u * 1.05, SIL, WIN); break;
+    case "civil":
+      crane(c, w * .2, gy, h * .7, SIL); haze(c, w, h, gy); ground(c, w, h, gy);
+      frame(c, w * .44, w * .9, gy, h * .42, SIL, 5, R);
+      excavator(c, w * .04, gy, u * .5, MID, "rgba(255,190,90,.4)"); break;
+    case "energia":
+      haze(c, w, h, gy); ground(c, w, h, gy);
+      lightTower(c, w * .78, gy, h * .5, SIL, true);
+      generator(c, w * .2, gy, u * 1.15, SIL, "rgba(120,255,170,.85)");
+      c.strokeStyle = SIL; c.lineWidth = 2.5; c.beginPath(); c.moveTo(w * .2 + u * 3.5, gy - 4); c.quadraticCurveTo(w * .6, gy + 8, w * .78, gy - h * .05); c.stroke(); break;
+    case "soldadura": {
+      haze(c, w, h, gy); ground(c, w, h, gy);
+      steel(c, w * .3, w * .95, gy, h * .55, SIL);
+      const px = w * .62, py = gy - h * .62;
+      welder(c, w * .08, gy, u * 1.1, SIL, px, py); sparks(c, px, py, h * .09, R); break; }
+    case "petroleo":
+      haze(c, w, h, gy); ground(c, w, h, gy);
+      rig(c, w * .62, gy, h * .74, SIL, 1);
+      pipes(c, w * .08, gy, h * .045, 4, SIL); break;
+    case "hero": {
+      crane(c, w * .1, gy, h * .55, FAR); frame(c, w * .2, w * .33, gy, h * .22, FAR, 4, R);
+      haze(c, w, h, gy); ground(c, w, h, gy);
+      rig(c, w * .84, gy, h * .7, SIL, 1);
+      lightTower(c, w * .66, gy, h * .3, SIL, true);
+      pipes(c, w * .7, gy, h * .03, 3, SIL);
+      excavator(c, w * .4, gy + u * .1, Math.min(u * 1.15, h * .085), SIL, WIN); break; }
+  }
+  const v = c.createRadialGradient(w / 2, h / 2, Math.min(w, h) * .3, w / 2, h / 2, Math.max(w, h) * .75);
+  v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,.45)"); c.fillStyle = v; c.fillRect(0, 0, w, h);
+  c.restore();
+}
+function paint(cv) {
+  const r = cv.getBoundingClientRect(); if (r.width < 2 || r.height < 2) return;
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = Math.round(r.width * dpr), H = Math.round(r.height * dpr);
+  if (cv.width === W && cv.height === H && cv.dataset.painted) return;
+  cv.width = W; cv.height = H; const c = cv.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+  drawScene(c, r.width, r.height, cv.dataset.scene, Number(cv.dataset.seed) || 1, cv.dataset.mirror === "1");
+  cv.dataset.painted = "1";
+}
+const ro = "ResizeObserver" in window ? new ResizeObserver(es => es.forEach(e => { e.target.dataset.painted = ""; paint(e.target); })) : null;
+function mountScenes(root) { $$("canvas[data-scene]", root).forEach(cv => { if (cv._m) return; cv._m = 1; if (ro) ro.observe(cv); requestAnimationFrame(() => paint(cv)); }); }
+const sceneCanvas = (kind, seed, mirror) => `<canvas data-scene="${kind}" data-seed="${seed}" data-mirror="${mirror ? 1 : 0}" aria-hidden="true"></canvas>`;
+
+/* Hero animado */
+(function hero() {
+  const cv = $("#hero-cv"), c = cv.getContext("2d"), off = document.createElement("canvas");
+  let w = 0, h = 0, dpr = 1, parts = [], t0 = performance.now(), raf = 0;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function build() {
+    const r = cv.getBoundingClientRect(); w = r.width; h = r.height; if (w < 2) return;
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = off.width = Math.round(w * dpr); cv.height = off.height = Math.round(h * dpr);
+    const oc = off.getContext("2d"); oc.setTransform(dpr, 0, 0, dpr, 0, 0); drawScene(oc, w, h, "hero", 21, false);
+    const R = rng(4); parts = Array.from({length: 70}, () => ({x: R() * w, y: h * (.45 + R() * .5), r: .6 + R() * 2.2, v: .1 + R() * .35, a: .1 + R() * .35}));
+    frameDraw(t0);
+  }
+  function frameDraw(t) {
+    c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(off, 0, 0); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const k = (t - t0) / 1000;
+    for (const p of parts) { const x = (p.x + k * p.v * 28) % (w + 20) - 10, y = p.y + Math.sin(k * .7 + p.x) * 6; c.fillStyle = `rgba(255,200,120,${p.a})`; c.beginPath(); c.arc(x, y, p.r, 0, 7); c.fill(); }
+    const b = (Math.sin(k * 3) + 1) / 2, bx = w * .84, by = h * .8 - h * .7 - h * .7 * .07;
+    const g = c.createRadialGradient(bx, by, 0, bx, by, 8 + b * 14); g.addColorStop(0, `rgba(255,80,60,${.5 + b * .5})`); g.addColorStop(1, "rgba(255,80,60,0)");
+    c.fillStyle = g; c.beginPath(); c.arc(bx, by, 22, 0, 7); c.fill();
+  }
+  function loop(t) { frameDraw(t); raf = requestAnimationFrame(loop); }
+  build();
+  if (!reduce) {
+    const io = new IntersectionObserver(([e]) => { cancelAnimationFrame(raf); if (e.isIntersecting) raf = requestAnimationFrame(loop); });
+    io.observe(cv);
+  }
+  let tm; addEventListener("resize", () => { clearTimeout(tm); tm = setTimeout(build, 150); });
+})();
+
+/* ---------- Render: franjas, razones, catálogo ---------- */
+function renderStatic() {
+  $("#strip").innerHTML = services().map(s => `<a href="#servicios" data-detail="${s.id}">${I[s.cat]}<span>${esc(s.nombre)}</span></a>`).join("");
+  const R = [
+    ["layers", "Cinco frentes, un aliado", "Maquinaria, obra civil, energía, soldadura y tubería coordinadas desde una sola empresa."],
+    ["tag", "Tarifas claras", "Valores de referencia publicados por hora, día, semana y mes, antes de cualquier negociación."],
+    ["doc", "Cotización formal", "Genere un documento con servicios, cantidades y valores estimados para su aprobación interna."],
+    ["op", "Equipos con operación", "Maquinaria entregada con operador cuando el servicio lo requiere, según lo acordado."],
+    ["shield", "Seguridad en cada frente", "Inspección de equipos y análisis de riesgos antes de iniciar cada actividad."],
+    ["chat", "Respuesta directa", "Comunicación por WhatsApp con el resumen de su solicitud para agilizar la gestión."]
+  ];
+  $("#reasons").innerHTML = R.map(([i, t, d]) => `<div class="reason reveal">${I[i]}<h3>${t}</h3><p>${d}</p></div>`).join("");
+  $("#cat-chips").innerHTML = CATS.map(c => `<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id === state.cat}">${c.label}</button>`).join("");
+  $("#gal-chips").innerHTML = CATS.map(c => `<button class="chip" type="button" data-gcat="${c.id}" aria-pressed="${c.id === state.gcat}">${c.label}</button>`).join("");
+  $("#foot-svc").innerHTML = services().map(s => `<li><a href="#servicios" data-detail="${s.id}">${esc(s.nombre)}</a></li>`).join("");
+  $("#yr").textContent = new Date().getFullYear();
+}
+const catLabel = id => CATS.find(c => c.id === id)?.label || "";
+const mediaHTML = (s, extra = "") => s.img
+  ? `<div class="media">${extra}<img src="${esc(s.img)}" alt="${esc(s.nombre)}" loading="lazy"></div>`
+  : `<div class="media">${sceneCanvas(s.scene, s.seed)}${extra}<span class="illus">Imagen ilustrativa</span></div>`;
+function renderCatalog() {
+  const q = state.q.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const list = services().filter(s => (state.cat === "todas" || s.cat === state.cat) && (!q || (s.nombre + " " + s.desc + " " + s.kw).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").includes(q)));
+  $("#svc-grid").innerHTML = list.length ? list.map(s => `
+    <article class="svc reveal">
+      ${mediaHTML(s, `<span class="tag">${I[s.cat]}${esc(catLabel(s.cat))}</span>`)}
+      <div class="svc-body">
+        <h3>${esc(s.nombre)}</h3>
+        <p>${esc(s.desc)}</p>
+        <div class="from"><small>Desde</small><b class="num">${money(s.hora)}</b><small>/ hora</small></div>
+        <div class="svc-btns">
+          <button class="btn btn-dark btn-sm" data-detail="${s.id}">Ver detalles</button>
+          <button class="btn btn-primary btn-sm" data-quote="${s.id}">Cotizar</button>
+          <button class="btn btn-line btn-sm" data-rates="${s.id}">Tarifas</button>
+        </div>
+      </div>
+    </article>`).join("") : `<div class="empty" style="grid-column:1/-1">No encontramos servicios con “${esc(state.q)}”. Pruebe con otra palabra o seleccione “Todas”.</div>`;
+  mountScenes($("#svc-grid")); observeReveal($("#svc-grid"));
+}
+
+/* ---------- Tarifas y calculadora ---------- */
+function renderRates() {
+  $("#rt tbody").innerHTML = services().map(s => `<tr data-row="${s.id}" class="${s.id === state.calc.sid ? "sel" : ""}" tabindex="0" aria-label="Seleccionar ${esc(s.nombre)} en la calculadora">
+    <td><span class="ic">${I[s.cat]}<span>${esc(s.nombre)}${s.cotizable ? '<span class="q">Cotización a medida</span>' : ""}</span></span></td>
+    ${PKEYS.map(p => `<td>${money(s[p])}</td>`).join("")}</tr>`).join("");
+  const opts = services().map(s => `<option value="${s.id}">${esc(s.nombre)}</option>`).join("");
+  const cs = $("#c-svc"); cs.innerHTML = opts; cs.value = state.calc.sid;
+  $("#q-svc").innerHTML = `<option value="">Seleccione…</option>${opts}<option value="varios">Varios servicios (ver resumen)</option>`;
+  renderCalc();
+}
+function daysBetween(a, b) { if (!a || !b) return 0; const d = (new Date(b + "T00:00") - new Date(a + "T00:00")) / 864e5; return d >= 0 ? Math.round(d) + 1 : 0; }
+function periodsFromDates(per, days) { if (!days) return 0; return per === "dia" ? days : per === "semana" ? Math.ceil(days / 7) : per === "mes" ? Math.ceil(days / 30) : 0; }
+function renderCalc() {
+  const k = state.calc, s = svc(k.sid); if (!s) return;
+  $("#c-per").innerHTML = PKEYS.map(p => `<button type="button" role="radio" aria-checked="${p === k.per}" data-per="${p}"><b>${PER[p].label}</b><small class="num">${money(s[p])}</small></button>`).join("");
+  $("#l-cant").textContent = PER[k.per].plural;
+  $("#l-unid").textContent = s.unid[1];
+  $("#c-cant").value = k.cant; $("#c-unid").value = k.unid;
+  $("#c-ini").value = k.ini; $("#c-fin").value = k.fin; $("#c-fin").min = k.ini || "";
+  $("#c-ini").min = todayISO();
+  const days = daysBetween(k.ini, k.fin);
+  $("#c-hint").textContent = k.per === "hora" ? "Para alquiler por horas indique el número de horas; las fechas son opcionales y quedan como referencia."
+    : days ? `${days} ${days === 1 ? "día" : "días"} calendario entre las fechas seleccionadas → ${periodsFromDates(k.per, days)} ${perWord(k.per, periodsFromDates(k.per, days))}.`
+    : "Seleccione fechas para calcular la duración automáticamente o ajuste la cantidad manualmente.";
+  const total = rate(k.sid, k.per) * k.cant * k.unid;
+  $("#c-total").textContent = money(total);
+  $("#c-formula").textContent = `${money(rate(k.sid, k.per))} × ${k.cant} ${perWord(k.per, k.cant)} × ${k.unid} ${unitWord(s, k.unid)}`;
+  $("#c-custom").hidden = !s.cotizable;
+  $("#c-quote").hidden = !s.cotizable;
+  $$("#rt tbody tr").forEach(tr => tr.classList.toggle("sel", tr.dataset.row === k.sid));
+}
+function setCalc(patch) {
+  Object.assign(state.calc, patch);
+  const k = state.calc;
+  if ("per" in patch || "ini" in patch || "fin" in patch) {
+    if (k.fin && k.ini && k.fin < k.ini) k.fin = "";
+    const n = periodsFromDates(k.per, daysBetween(k.ini, k.fin));
+    if (n) k.cant = n; else if ("per" in patch) k.cant = PER[k.per].def;
+  }
+  k.cant = clampInt(k.cant); k.unid = clampInt(k.unid, 1, 200);
+  renderCalc();
+}
+function addToCart(item) {
+  state.cart.push({id: Math.random().toString(36).slice(2, 9), ...item});
+  saveCart(); toast(`${svc(item.sid).nombre} agregado al carrito.`);
+}
+
+/* ---------- Carrito ---------- */
+function renderCartAll() {
+  const n = state.cart.length; const b = $("#cart-n"); b.textContent = n; b.dataset.n = n;
+  $("#btn-cart").setAttribute("aria-label", `Abrir carrito, ${n} ${n === 1 ? "servicio" : "servicios"}`);
+  renderCart(); renderSummary(); updateWA();
+}
+function totHTML(t) {
+  return `<div><span>Subtotal</span><span class="num">${money(t.sub)}</span></div>
+    <div><span>${cfg.impuestos.aplica ? `IVA (${t.tasa}%) estimado` : "Impuestos"}</span><span class="num">${cfg.impuestos.aplica ? money(t.iva) : "No aplica"}</span></div>
+    <div class="grand"><span>Total estimado</span><span class="num">${money(t.total)}</span></div>`;
+}
+function renderCart() {
+  const body = $("#cart-body"), foot = $("#cart-foot");
+  if (!state.cart.length) {
+    body.innerHTML = `<div class="cart-empty">${I.cart}<p><b>Su carrito está vacío.</b><br>Agregue servicios desde la calculadora de tarifas.</p><button class="btn btn-dark btn-sm" data-go="tarifas">Ir a tarifas</button></div>`;
+    foot.innerHTML = ""; return;
+  }
+  body.innerHTML = state.cart.map(i => { const s = svc(i.sid); return `
+    <div class="ci" data-item="${i.id}">
+      <div class="ci-top"><div><b>${esc(s.nombre)}</b><small>${i.ini ? `Inicio ${esc(i.ini)}${i.fin ? " · Fin " + esc(i.fin) : ""}` : "Fechas por definir"}</small></div><button class="rm" data-rm="${i.id}" aria-label="Eliminar ${esc(s.nombre)}">Eliminar</button></div>
+      <div class="ci-grid">
+        <label class="field"><span>Modalidad</span><select data-f="per">${PKEYS.map(p => `<option value="${p}" ${p === i.per ? "selected" : ""}>Por ${PER[p].one}</option>`).join("")}</select></label>
+        <label class="field"><span>${PER[i.per].plural}</span><input data-f="cant" type="number" min="1" value="${clampInt(i.cant)}" inputmode="numeric"></label>
+        <label class="field"><span>${s.unid[1]}</span><input data-f="unid" type="number" min="1" value="${clampInt(i.unid)}" inputmode="numeric"></label>
+      </div>
+      <div class="ci-price"><span>${money(rate(i.sid, i.per))} / ${PER[i.per].one}${s.cotizable ? " · sujeto a cotización" : ""}</span><b class="num">${money(lineTotal(i))}</b></div>
+    </div>`; }).join("");
+  const t = totals(cartLines());
+  foot.innerHTML = `<div class="tot">${totHTML(t)}</div>
+    <p class="hint">Valores estimados con tarifas de referencia. El valor final se confirma en la cotización comercial.</p>
+    <div class="form-btns"><button class="btn btn-line btn-sm" data-close>Continuar comprando</button><button class="btn btn-primary" id="go-checkout" style="flex:1">Finalizar solicitud</button></div>`;
+}
+$("#cart-body").addEventListener("change", e => {
+  const card = e.target.closest("[data-item]"), f = e.target.dataset.f; if (!card || !f) return;
+  const it = state.cart.find(x => x.id === card.dataset.item); if (!it) return;
+  if (f === "per") { it.per = e.target.value; const n = periodsFromDates(it.per, daysBetween(it.ini, it.fin)); it.cant = n || PER[it.per].def; }
+  else it[f] = clampInt(e.target.value, 1, f === "unid" ? 200 : 9999);
+  saveCart();
+});
+$("#cart-body").addEventListener("click", e => { const id = e.target.closest("[data-rm]")?.dataset.rm; if (id) { state.cart = state.cart.filter(x => x.id !== id); saveCart(); toast("Servicio eliminado del carrito."); } });
+
+/* ---------- Resumen cotización y WhatsApp ---------- */
+function renderSummary() {
+  const lines = cartLines();
+  $("#sum-lines").innerHTML = lines.length ? lines.map(l => `<div class="sum-line"><div>${esc(l.servicio)}<small>${l.cant} ${perWord(l.per, l.cant)} × ${l.unid} ${esc(l.unidLabel)}</small></div><b class="num">${money(l.valor)}</b></div>`).join("")
+    : `<p style="color:var(--steel-2);font-size:.92rem">Aún no hay servicios en el carrito. La cotización se registrará con el servicio y la cantidad indicados en el formulario.</p>`;
+  $("#sum-tot").innerHTML = lines.length ? totHTML(totals(lines)) : "";
+}
+function waNumber() { return String(cfg.contacto.whatsapp || "").replace(/\D/g, ""); }
+function waLink(text) { const n = waNumber(); return `https://wa.me/${n}?text=${encodeURIComponent(text)}`; }
+function cartText() {
+  const lines = cartLines(); if (!lines.length) return "";
+  const t = totals(lines);
+  return lines.map(l => `• ${l.servicio}: ${l.cant} ${perWord(l.per, l.cant)} × ${l.unid} ${l.unidLabel} = ${money(l.valor)}`).join("\n") +
+    `\nSubtotal: ${money(t.sub)}${cfg.impuestos.aplica ? `\nIVA (${t.tasa}%): ${money(t.iva)}` : ""}\nTotal estimado: ${money(t.total)}`;
+}
+function quoteWAText() {
+  const f = readQuoteForm(), ct = cartText(), s = svc(f.svc);
+  let txt = "Hola, Montajes Técnicos Zambrano y Vargas. Quiero solicitar una cotización.\n";
+  if (ct) txt += "\nServicios seleccionados:\n" + ct + "\n";
+  else if (s) txt += `\nServicio: ${s.nombre}\nCantidad de equipos: ${f.cant}\n`;
+  const d = [["Nombre", f.nombre], ["Empresa", f.empresa], ["Teléfono", f.tel], ["Correo", f.email], ["Lugar del proyecto", f.lugar], ["Fecha requerida", f.fecha], ["Duración estimada", f.dur], ["Observaciones", f.obs]].filter(x => x[1]);
+  if (d.length) txt += "\n" + d.map(x => `${x[0]}: ${x[1]}`).join("\n");
+  return txt;
+}
+function updateWA() {
+  const ct = cartText();
+  const g = ct ? "Hola, MTZV. Quiero información sobre estos servicios:\n" + ct : "Hola, Montajes Técnicos Zambrano y Vargas. Quiero información sobre sus servicios.";
+  $$(".js-wa").forEach(a => a.href = waLink(g));
+  $$(".js-wa-quote").forEach(a => a.href = waLink(quoteWAText()));
+}
+
+/* ---------- Galería ---------- */
+const GAL = [
+  {cat:"maquinaria", t:"Movimiento de tierras", s:"maquinaria", seed:31, wide:true},
+  {cat:"civil", t:"Estructura en ejecución", s:"civil", seed:9},
+  {cat:"energia", t:"Energía e iluminación nocturna", s:"energia", seed:17},
+  {cat:"petroleo", t:"Locación de perforación", s:"petroleo", seed:41},
+  {cat:"maquinaria", t:"Excavación con operador", s:"maquinaria", seed:57, m:1},
+  {cat:"soldadura", t:"Montaje de estructura metálica", s:"soldadura", seed:23, wide:true},
+  {cat:"civil", t:"Izaje en obra civil", s:"civil", seed:61, m:1},
+  {cat:"petroleo", t:"Manejo de tubería", s:"petroleo", seed:77, m:1},
+  {cat:"energia", t:"Respaldo para frente de obra", s:"energia", seed:83, m:1},
+  {cat:"soldadura", t:"Mantenimiento con soldadura", s:"soldadura", seed:89, m:1}
+];
+function renderGallery() {
+  $("#gal").innerHTML = GAL.map((g, i) => `<button class="gi ${g.wide ? "wide" : ""}" type="button" data-g="${i}" data-cat="${g.cat}" aria-label="${esc(g.t)}, ${esc(catLabel(g.cat))}. Ver servicios relacionados">${sceneCanvas(g.s, g.seed, g.m)}<span class="illus">Imagen ilustrativa</span><span class="cap"><small>${esc(catLabel(g.cat))}</small><b>${esc(g.t)}</b></span></button>`).join("");
+  mountScenes($("#gal")); filterGallery();
+}
+function filterGallery() { $$("#gal .gi").forEach(el => el.hidden = !(state.gcat === "todas" || el.dataset.cat === state.gcat)); $$("#gal-chips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.gcat === state.gcat)); }
+
+/* ---------- Contacto ---------- */
+function renderContact() {
+  const k = cfg.contacto, P = '<span class="pending">Pendiente de configuración</span>';
+  const v = (x, label) => x ? `<span>${esc(x)}</span>` : `<span>${label}</span><br>${P}`;
+  const wa = waNumber();
+  const soc = [["Facebook", k.facebook], ["Instagram", k.instagram], ["LinkedIn", k.linkedin]];
+  $("#cinfo").innerHTML = `
+    <div>${I.phone}<div><small>Teléfono</small>${v(k.telefono, "Línea comercial")}</div></div>
+    <div>${I.chat}<div><small>WhatsApp</small>${wa ? `<span>+${esc(wa)}</span>` : `<span>Línea de WhatsApp</span><br>${P}`}</div></div>
+    <div>${I.mail}<div><small>Correo corporativo</small>${v(k.email, "Correo comercial")}</div></div>
+    <div>${I.pin}<div><small>Ubicación</small>${v(k.direccion, "Dirección de oficina")}</div></div>
+    <div>${I.clock}<div><small>Horario de atención</small>${v(k.horario, "Horario comercial")}</div></div>
+    <div>${I.share}<div><small>Redes sociales</small><div class="socials">${soc.map(([n, u]) => /^https?:\/\//.test(u || "") ? `<a href="${esc(u)}" target="_blank" rel="noopener">${n}</a>` : `<span title="Pendiente de configuración">${n} · pendiente</span>`).join("")}</div></div></div>`;
+}
+
+/* ---------- Formularios y validación ---------- */
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function setErr(input, msg) { const e = input.closest(".field")?.querySelector(".err"); input.setAttribute("aria-invalid", msg ? "true" : "false"); if (e) e.textContent = msg || ""; return !msg; }
+function validate(rules) { let ok = true, first = null; for (const [el, fn] of rules) { const m = fn(el.value.trim()); if (!setErr(el, m)) { ok = false; first = first || el; } } if (first) first.focus(); return ok; }
+const reqd = label => v => v ? "" : `Ingrese ${label}.`;
+const vEmail = v => !v ? "Ingrese un correo electrónico." : EMAIL.test(v) ? "" : "Revise el correo: debe tener el formato nombre@empresa.com.";
+const vTel = (req) => v => { const d = v.replace(/\D/g, ""); if (!d) return req ? "Ingrese un número de teléfono." : ""; return d.length >= 7 && d.length <= 15 ? "" : "El teléfono debe tener entre 7 y 15 dígitos."; };
+function readQuoteForm() {
+  return {nombre:$("#q-nombre").value.trim(), empresa:$("#q-empresa").value.trim(), email:$("#q-email").value.trim(), tel:$("#q-tel").value.trim(), svc:$("#q-svc").value, cant:clampInt($("#q-cant").value), dur:$("#q-dur").value.trim(), lugar:$("#q-lugar").value.trim(), fecha:$("#q-fecha").value, obs:$("#q-obs").value.trim()};
+}
+function quoteDoc(ref) {
+  const f = readQuoteForm(); let lines = cartLines();
+  if (!lines.length && svc(f.svc)) { const s = svc(f.svc); lines = [{sid:s.id, servicio:s.nombre, per:"dia", modalidad:"Por día (referencia)", cant:1, unid:f.cant, unidLabel:unitWord(s, f.cant), tarifa:s.dia, valor:s.dia * f.cant, cotizable:s.cotizable}]; }
+  return {tipo:"Cotización", ref:ref || newRef("COT"), fecha:new Date().toISOString(), cliente:f, lineas:lines, ...totals(lines)};
+}
+const quoteRules = () => [[$("#q-nombre"), reqd("el nombre del cliente")], [$("#q-email"), vEmail], [$("#q-tel"), vTel(true)], [$("#q-svc"), v => v ? "" : "Seleccione el servicio requerido."], [$("#q-lugar"), reqd("el lugar de ejecución")]];
+$("#q-fecha").min = todayISO();
+$("#qform").addEventListener("input", e => { if (e.target.getAttribute("aria-invalid") === "true") setErr(e.target, ""); updateWA(); });
+$("#qform").addEventListener("submit", async e => {
+  e.preventDefault(); if (!validate(quoteRules())) { status("#q-status", "warn", "Revise los campos marcados para continuar."); return; }
+  const doc = quoteDoc(); const where = await saveSolicitud({...doc, tipoReg:"cotizacion", estado:"nuevo"});
+  state.lastQuote = doc;
+  status("#q-status", where === "db" ? "ok" : "warn", where === "db"
+    ? `Solicitud ${doc.ref} registrada. El equipo comercial la verá en el panel administrativo. Puede descargar el PDF o enviarla por WhatsApp.`
+    : `Solicitud ${doc.ref} guardada en este navegador. Para que llegue a la empresa, envíela por WhatsApp o descargue el PDF y compártalo.`);
+  openQuoteDoc(doc);
+});
+$("#q-preview").addEventListener("click", () => { if (!validate(quoteRules())) { status("#q-status", "warn", "Complete los campos obligatorios para generar la cotización formal."); return; } openQuoteDoc(quoteDoc()); });
+$("#cform").addEventListener("submit", async e => {
+  e.preventDefault();
+  if (!validate([[$("#k-nombre"), reqd("su nombre")], [$("#k-email"), vEmail], [$("#k-tel"), vTel(false)], [$("#k-msg"), reqd("un mensaje")]])) return;
+  const entry = {tipoReg:"contacto", ref:newRef("MSG"), fecha:new Date().toISOString(), estado:"nuevo", cliente:{nombre:$("#k-nombre").value.trim(), email:$("#k-email").value.trim(), tel:$("#k-tel").value.trim(), obs:$("#k-msg").value.trim()}, lineas:[], sub:0, iva:0, total:0};
+  const where = await saveSolicitud(entry);
+  status("#k-status", where === "db" ? "ok" : "warn", where === "db" ? "Mensaje recibido. Le responderemos por el medio indicado." : "Mensaje guardado en este navegador. Mientras se configuran los datos de contacto, escríbanos por WhatsApp para una respuesta inmediata.");
+  if (where === "db") e.target.reset();
+});
+function status(sel, kind, msg) { $(sel).innerHTML = `<div class="form-status ${kind}">${kind === "ok" ? I.ok : I.warn}<span>${esc(msg)}</span></div>`; }
+
+/* ---------- Persistencia de solicitudes ---------- */
+let wq = Promise.resolve();
+function saveSolicitud(entry) {
+  const run = async () => {
+    const {db, uid} = state.caps;
+    if (db && uid) {
+      try {
+        const ref = db.doc("solicitudes/" + uid); const snap = await ref.get();
+        const items = snap.exists && Array.isArray(snap.data().items) ? snap.data().items.slice() : [];
+        items.push(entry); await ref.set({items: items.slice(-200), actualizado: new Date().toISOString()});
+        return "db";
+      } catch (err) { /* sin permiso de escritura: se guarda localmente */ }
+    }
+    const loc = store.get("mtzv_solicitudes", []); loc.push(entry); store.set("mtzv_solicitudes", loc.slice(-50)); return "local";
+  };
+  const p = wq.then(run, run); wq = p.catch(() => {}); return p;
+}
+
+/* ---------- Documento formal y PDF ---------- */
+function docHTML(d) {
+  const c = d.cliente || {}, k = cfg.contacto;
+  const cli = [["Cliente", c.nombre], ["Empresa", c.empresa], ["Correo", c.email], ["Teléfono", c.tel], ["Lugar de ejecución", c.lugar], ["Fecha requerida", c.fecha ? fechaLarga(c.fecha + "T00:00") : ""], ["Duración estimada", c.dur], ["Medio de pago", d.metodo]].filter(x => x[1]);
+  return `<div class="doc">
+    <div class="doc-h">
+      <span class="brand"><svg viewBox="0 0 48 48" aria-hidden="true" style="width:46px;height:46px"><path d="M24 2.5 42.6 13.25v21.5L24 45.5 5.4 34.75v-21.5Z" fill="#0f2737" stroke="#f26a1b" stroke-width="2.4"/><path d="M14.5 32.5V16l9.5 8.6 9.5-8.6v16.5" fill="none" stroke="#f26a1b" stroke-width="3.4" stroke-linecap="square"/></svg><span class="brand-t"><b>MTZV</b><small>Montajes Técnicos Zambrano y Vargas</small></span></span>
+      <div class="doc-meta"><b>${esc(d.tipo)}</b><span>No. ${esc(d.ref)}</span><span>Fecha: ${fechaLarga(d.fecha)}</span><span>Vigencia: sujeta a confirmación comercial</span></div>
+    </div>
+    <div class="doc-cli">${cli.map(([a, b]) => `<div><small>${a}</small><span>${esc(b)}</span></div>`).join("")}</div>
+    <div class="doc-tbl"><table><thead><tr><th>Servicio</th><th>Modalidad</th><th>Cant.</th><th>Unidades</th><th>Tarifa</th><th>Valor estimado</th></tr></thead><tbody>
+      ${d.lineas.length ? d.lineas.map(l => `<tr><td>${esc(l.servicio)}${l.cotizable ? "<br><small style='color:var(--warn)'>Requiere cotización personalizada</small>" : ""}</td><td>${esc(l.modalidad)}</td><td>${l.cant}</td><td>${l.unid}</td><td>${money(l.tarifa)}</td><td>${money(l.valor)}</td></tr>`).join("") : `<tr><td colspan="6">Servicios por definir con el equipo comercial.</td></tr>`}
+    </tbody></table></div>
+    <div class="doc-tot"><div><span>Subtotal</span><span>${money(d.sub)}</span></div><div><span>${cfg.impuestos.aplica ? `IVA (${d.tasa}%)` : "Impuestos"}</span><span>${cfg.impuestos.aplica ? money(d.iva) : "No aplica"}</span></div><div class="grand"><span>Total estimado</span><span>${money(d.total)}</span></div></div>
+    ${c.obs ? `<div><small class="lbl">Observaciones</small><p>${esc(c.obs)}</p></div>` : ""}
+    <div class="doc-foot"><p>Valores calculados con tarifas de referencia en pesos colombianos (COP), sujetos a disponibilidad, alcance del servicio y confirmación comercial. Este documento no constituye factura ni comprobante de pago.</p>
+    <p>${[k.telefono && "Tel. " + k.telefono, k.email, k.direccion].filter(Boolean).map(esc).join(" · ") || "Datos de contacto de la empresa pendientes de configuración."}</p></div>
+  </div>`;
+}
+async function openQuoteDoc(d) {
+  state.lastDoc = d;
+  $("#t-qdoc").textContent = d.tipo === "Cotización" ? "Cotización formal" : "Solicitud de alquiler";
+  $("#qdoc-body").innerHTML = docHTML(d);
+  $("#qdoc-foot").innerHTML = `
+    <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="${waLink(docWAText(d))}">Enviar por WhatsApp</a>
+    <button class="btn btn-primary btn-sm" id="dl-pdf">Descargar PDF</button>`;
+  openDlg("#qdoc");
+}
+function docWAText(d) {
+  const c = d.cliente || {};
+  return `Hola, MTZV. Envío la ${d.tipo.toLowerCase()} ${d.ref}.\n` + d.lineas.map(l => `• ${l.servicio}: ${l.cant} × ${l.unid} = ${money(l.valor)}`).join("\n") + `\nTotal estimado: ${money(d.total)}` + (c.nombre ? `\nCliente: ${c.nombre}${c.empresa ? " (" + c.empresa + ")" : ""}` : "") + (c.lugar ? `\nLugar: ${c.lugar}` : "");
+}
+function buildPDF(d) {
+  const {jsPDF} = window.jspdf; const pdf = new jsPDF({unit:"mm", format:"letter"});
+  const W = 215.9, M = 16, c = d.cliente || {}, k = cfg.contacto; let y;
+  pdf.setFillColor(15, 39, 55); pdf.rect(0, 0, W, 36, "F");
+  pdf.setFillColor(242, 106, 27); pdf.rect(0, 36, W, 2.2, "F");
+  pdf.setDrawColor(242, 106, 27); pdf.setLineWidth(.9);
+  const hx = M + 9, hy = 18, hr = 9; const pts = []; for (let i = 0; i < 6; i++) { const a = Math.PI / 6 + i * Math.PI / 3; pts.push([hx + hr * Math.cos(a), hy + hr * Math.sin(a)]); }
+  for (let i = 0; i < 6; i++) { const a = pts[i], b = pts[(i + 1) % 6]; pdf.line(a[0], a[1], b[0], b[1]); }
+  pdf.setLineWidth(1.3); pdf.line(hx - 4, hy + 4.5, hx - 4, hy - 4); pdf.line(hx - 4, hy - 4, hx, hy); pdf.line(hx, hy, hx + 4, hy - 4); pdf.line(hx + 4, hy - 4, hx + 4, hy + 4.5);
+  pdf.setTextColor(242, 106, 27); pdf.setFont("helvetica", "bold"); pdf.setFontSize(22); pdf.text("MTZV", M + 22, 19);
+  pdf.setTextColor(200, 214, 222); pdf.setFont("helvetica", "normal"); pdf.setFontSize(8.5); pdf.text("MONTAJES TÉCNICOS ZAMBRANO Y VARGAS", M + 22, 25.5);
+  pdf.setTextColor(255, 255, 255); pdf.setFont("helvetica", "bold"); pdf.setFontSize(14); pdf.text(d.tipo.toUpperCase(), W - M, 15, {align:"right"});
+  pdf.setFont("helvetica", "normal"); pdf.setFontSize(9); pdf.text("No. " + d.ref, W - M, 21, {align:"right"}); pdf.text("Fecha: " + fechaLarga(d.fecha), W - M, 26, {align:"right"});
+  y = 48; pdf.setTextColor(12, 24, 32);
+  const cli = [["Cliente", c.nombre], ["Empresa", c.empresa], ["Correo", c.email], ["Teléfono", c.tel], ["Lugar de ejecución", c.lugar], ["Fecha requerida", c.fecha ? fechaLarga(c.fecha + "T00:00") : ""], ["Duración estimada", c.dur], ["Medio de pago", d.metodo]].filter(x => x[1]);
+  pdf.setFont("helvetica", "bold"); pdf.setFontSize(10); pdf.text("DATOS DEL CLIENTE", M, y); y += 2; pdf.setDrawColor(200, 208, 214); pdf.setLineWidth(.3); pdf.line(M, y, W - M, y); y += 6;
+  pdf.setFontSize(9);
+  cli.forEach((x, i) => { const col = i % 2, xx = col ? W / 2 + 2 : M; pdf.setFont("helvetica", "bold"); pdf.setTextColor(64, 82, 96); pdf.text(x[0].toUpperCase(), xx, y); pdf.setFont("helvetica", "normal"); pdf.setTextColor(12, 24, 32); pdf.text(pdf.splitTextToSize(String(x[1]), W / 2 - M - 6)[0], xx, y + 4.5); if (col || i === cli.length - 1) y += 11; });
+  y += 3;
+  const cols = [{t:"Servicio", w:62, a:"left"}, {t:"Modalidad", w:28, a:"left"}, {t:"Cant.", w:14, a:"right"}, {t:"Unid.", w:14, a:"right"}, {t:"Tarifa", w:27, a:"right"}, {t:"Valor estimado", w:W - 2 * M - 145, a:"right"}];
+  const head = () => { pdf.setFillColor(236, 239, 241); pdf.rect(M, y - 5, W - 2 * M, 8, "F"); pdf.setFont("helvetica", "bold"); pdf.setFontSize(8); pdf.setTextColor(64, 82, 96); let x = M + 2; cols.forEach(cl => { pdf.text(cl.t.toUpperCase(), cl.a === "right" ? x + cl.w - 4 : x, y, {align:cl.a}); x += cl.w; }); y += 8; };
+  head(); pdf.setFontSize(9);
+  const rows = d.lineas.length ? d.lineas : [{servicio:"Servicios por definir con el equipo comercial", modalidad:"", cant:"", unid:"", tarifa:"", valor:""}];
+  rows.forEach(l => {
+    const sv = pdf.splitTextToSize(l.servicio + (l.cotizable ? " (requiere cotización personalizada)" : ""), cols[0].w - 4); const rh = Math.max(7, sv.length * 4.4 + 3);
+    if (y + rh > 240) { pdf.addPage(); y = 20; head(); pdf.setFontSize(9); }
+    pdf.setFont("helvetica", "normal"); pdf.setTextColor(12, 24, 32);
+    const vals = [sv, l.modalidad, String(l.cant), String(l.unid), l.tarifa === "" ? "" : money(l.tarifa), l.valor === "" ? "" : money(l.valor)];
+    let x = M + 2; cols.forEach((cl, i) => { pdf.text(vals[i], cl.a === "right" ? x + cl.w - 4 : x, y, {align:cl.a}); x += cl.w; });
+    y += rh; pdf.setDrawColor(220, 226, 230); pdf.line(M, y - 4, W - M, y - 4);
+  });
+  y += 4; if (y > 225) { pdf.addPage(); y = 24; }
+  const tx = W - M - 80; const tl = [["Subtotal", money(d.sub)], [cfg.impuestos.aplica ? `IVA (${d.tasa}%)` : "Impuestos", cfg.impuestos.aplica ? money(d.iva) : "No aplica"]];
+  pdf.setFontSize(10); tl.forEach(([a, b]) => { pdf.setFont("helvetica", "normal"); pdf.text(a, tx, y); pdf.text(b, W - M, y, {align:"right"}); y += 6; });
+  pdf.setDrawColor(12, 24, 32); pdf.setLineWidth(.6); pdf.line(tx, y - 3, W - M, y - 3); y += 3;
+  pdf.setFont("helvetica", "bold"); pdf.setFontSize(12); pdf.text("TOTAL ESTIMADO", tx, y); pdf.text(money(d.total), W - M, y, {align:"right"}); y += 12;
+  if (c.obs) { pdf.setFontSize(9); pdf.setFont("helvetica", "bold"); pdf.text("OBSERVACIONES", M, y); y += 5; pdf.setFont("helvetica", "normal"); const o = pdf.splitTextToSize(c.obs, W - 2 * M); pdf.text(o.slice(0, 10), M, y); y += o.slice(0, 10).length * 4.4 + 4; }
+  pdf.setFontSize(8); pdf.setTextColor(64, 82, 96);
+  const legal = pdf.splitTextToSize("Valores calculados con tarifas de referencia en pesos colombianos (COP), sujetos a disponibilidad, alcance del servicio y confirmación comercial. Este documento no constituye factura ni comprobante de pago.", W - 2 * M);
+  pdf.text(legal, M, 258);
+  pdf.setFillColor(15, 39, 55); pdf.rect(0, 266, W, 13.4, "F"); pdf.setTextColor(200, 214, 222);
+  const ct = [k.telefono && "Tel. " + k.telefono, k.email, k.direccion].filter(Boolean).join("  ·  ") || "Datos de contacto pendientes de configuración";
+  pdf.text("Montajes Técnicos Zambrano y Vargas  ·  " + ct, W / 2, 273.5, {align:"center"});
+  return pdf.output("blob");
+}
+async function downloadPDF(d) {
+  const dl = state.caps.downloads;
+  if (!window.jspdf) { toast("No se pudo cargar el generador de PDF. Recargue la página e intente de nuevo.", true); return; }
+  if (!dl) { try { const u = URL.createObjectURL(buildPDF(d)); const a = document.createElement("a"); a.href = u; a.download = `${d.ref}.pdf`; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); toast("PDF generado."); } catch { toast("No fue posible generar el PDF.", true); } return; }
+  try { await dl.save({filename: `${d.ref}.pdf`, data: buildPDF(d)}); toast("PDF descargado."); }
+  catch (e) { if (e && e.code === "declined") return; toast(e && e.code === "rate_limited" ? "Ya hay una descarga en curso. Inténtelo de nuevo en unos segundos." : "No fue posible descargar el PDF en esta vista.", true); }
+}
+
+/* ---------- Detalle ---------- */
+function openDetail(id) {
+  const s = svc(id); if (!s) return;
+  $("#t-det").textContent = s.nombre;
+  $("#det-body").innerHTML = `<div class="detail">
+    ${mediaHTML(s, `<span class="tag">${I[s.cat]}${esc(catLabel(s.cat))}</span>`)}
+    <div style="display:grid;gap:14px;align-content:start;min-width:0">
+      <p>${esc(s.desc)}</p>
+      <div><p class="lbl" style="margin-bottom:8px">Incluye</p><ul class="ticks">${s.incluye.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div><p class="lbl" style="margin-bottom:8px">Aplicaciones</p><ul class="ticks">${s.usos.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    </div></div>
+    <div><p class="lbl" style="margin-bottom:8px">Tarifas de referencia (COP, antes de impuestos)</p><div class="pgrid">${PKEYS.map(p => `<div><small>Por ${PER[p].one}</small><b class="num">${money(s[p])}</b></div>`).join("")}</div></div>
+    ${s.cotizable ? `<div class="custom-q">${I.warn}<span>Servicio con cotización personalizada: el valor final depende del alcance técnico.</span></div>` : ""}`;
+  $("#det-foot").innerHTML = `<button class="btn btn-line btn-sm" data-quote="${s.id}">Solicitar cotización</button><button class="btn btn-primary btn-sm" data-rates="${s.id}">Calcular alquiler</button>`;
+  mountScenes($("#det-body")); openDlg("#detail");
+}
+
+/* ---------- Checkout ---------- */
+const GW = [{id:"wompi", n:"Wompi", d:"PSE, tarjetas, Nequi y transferencias"}, {id:"mercadopago", n:"Mercado Pago", d:"Tarjetas, PSE y otros medios"}, {id:"payu", n:"PayU", d:"Tarjetas, PSE y efectivo"}];
+const MED = [{id:"pse", n:"PSE", d:"Débito desde cuenta bancaria"}, {id:"tarjeta", n:"Tarjeta débito o crédito", d:"Visa, Mastercard y otras"}, {id:"transferencia", n:"Transferencia bancaria", d:"Datos enviados al confirmar"}, {id:"nequi", n:"Nequi", d:"Si el proveedor lo habilita"}];
+function openCheckout() {
+  if (!state.cart.length) { toast("Agregue al menos un servicio para finalizar la solicitud.", true); return; }
+  state.chk.step = 0; state.chk.result = null; renderCheckout(); closeDlg("#cart"); openDlg("#checkout");
+}
+function renderCheckout() {
+  const k = state.chk, st = k.step, b = $("#chk-body"), f = $("#chk-foot");
+  $$("#chk-steps li").forEach((li, i) => { li.className = i === st ? "on" : i < st ? "done" : ""; });
+  const lines = cartLines(), t = totals(lines);
+  if (st === 0) {
+    const c = k.cli; const qf = readQuoteForm();
+    const val = (x, y) => esc(x || y || "");
+    b.innerHTML = `<p class="lead" style="color:var(--ink-2)">Datos de quien solicita el alquiler. Los usaremos para confirmar disponibilidad y enviar la cotización formal.</p>
+      <div class="form" style="border:0;padding:0;background:none"><div class="grid">
+        <label class="field"><span>Nombre completo <b class="req">*</b></span><input id="x-nombre" value="${val(c.nombre, qf.nombre)}" autocomplete="name"><small class="err"></small></label>
+        <label class="field"><span>Empresa</span><input id="x-empresa" value="${val(c.empresa, qf.empresa)}" autocomplete="organization"><small class="err"></small></label>
+        <label class="field"><span>NIT o documento</span><input id="x-nit" value="${val(c.nit)}"><small class="err"></small></label>
+        <label class="field"><span>Correo electrónico <b class="req">*</b></span><input id="x-email" type="email" value="${val(c.email, qf.email)}" autocomplete="email"><small class="err"></small></label>
+        <label class="field"><span>Teléfono <b class="req">*</b></span><input id="x-tel" type="tel" value="${val(c.tel, qf.tel)}" autocomplete="tel"><small class="err"></small></label>
+        <label class="field"><span>Lugar de ejecución <b class="req">*</b></span><input id="x-lugar" value="${val(c.lugar, qf.lugar)}"><small class="err"></small></label>
+      </div></div>`;
+    f.innerHTML = `<button class="btn btn-line btn-sm" data-close>Cancelar</button><button class="btn btn-primary btn-sm" id="chk-next">Continuar al pago</button>`;
+  } else if (st === 1) {
+    b.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><span class="pill demo">${I.warn.replace('<svg', '<svg width="14" height="14"')}Modo demostración</span><span class="hint">Las pasarelas están preparadas pero no tienen credenciales comerciales configuradas. No se realizará ningún cobro.</span></div>
+      <fieldset style="border:0;padding:0;margin:0;display:grid;gap:10px"><legend class="lbl" style="margin-bottom:10px">Pasarela de pago</legend><div class="opts">${GW.map(g => `<label class="opt"><input type="radio" name="gw" value="${g.id}" ${k.gw === g.id ? "checked" : ""}><b>${g.n}</b><small>${g.d}</small><span class="pill pend" style="justify-self:start;margin-top:6px">Pendiente de credenciales</span></label>`).join("")}</div></fieldset>
+      <fieldset style="border:0;padding:0;margin:0;display:grid;gap:10px"><legend class="lbl" style="margin-bottom:10px">Medio de pago</legend><div class="opts" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">${MED.map(m => `<label class="opt"><input type="radio" name="medio" value="${m.id}" ${k.medio === m.id ? "checked" : ""}><b>${m.n}</b><small>${m.d}</small></label>`).join("")}</div></fieldset>
+      <p class="hint">Con la integración real, el cliente será redirigido a la página segura de la pasarela y el estado del pago se verificará con su servidor antes de confirmarse.</p>`;
+    f.innerHTML = `<button class="btn btn-line btn-sm" id="chk-back">Atrás</button><button class="btn btn-primary btn-sm" id="chk-next">Revisar solicitud</button>`;
+  } else if (st === 2) {
+    const gw = GW.find(g => g.id === k.gw), md = MED.find(m => m.id === k.medio);
+    b.innerHTML = `<div class="doc-cli" style="background:#fff;border:1px solid var(--line-ink);padding:16px">
+        ${[["Cliente", k.cli.nombre], ["Empresa", k.cli.empresa], ["Correo", k.cli.email], ["Teléfono", k.cli.tel], ["Lugar", k.cli.lugar], ["Pago", `${md.n} vía ${gw.n}`]].filter(x => x[1]).map(([a, v]) => `<div><small>${a}</small><span>${esc(v)}</span></div>`).join("")}</div>
+      <div style="background:#fff;border:1px solid var(--line-ink);padding:0 16px">${lines.map(l => `<div class="sum-line" style="border-color:var(--line-ink)"><div>${esc(l.servicio)}<small style="color:var(--ink-2)">${l.cant} ${perWord(l.per, l.cant)} × ${l.unid} ${esc(l.unidLabel)} · ${money(l.tarifa)} / ${PER[l.per].one}</small></div><b class="num">${money(l.valor)}</b></div>`).join("")}
+      <div class="tot" style="padding:14px 0">${totHTML(t).replace(/class="grand"/, 'class="grand" style="color:var(--ink);border-color:var(--line-ink)"')}</div></div>
+      <p class="hint">Al enviar, se registra la solicitud de alquiler. El equipo comercial confirmará disponibilidad y valor final antes de cualquier pago.</p>`;
+    f.innerHTML = `<button class="btn btn-line btn-sm" id="chk-back">Atrás</button><button class="btn btn-primary btn-sm" id="chk-send">Enviar solicitud</button>`;
+  } else {
+    const r = k.result;
+    b.innerHTML = `<div class="confirm">
+      <span class="pill okp">${I.ok.replace('<svg', '<svg width="14" height="14"')}Solicitud registrada</span>
+      <p class="lbl">Número de solicitud</p><p class="refno">${esc(r.doc.ref)}</p>
+      <div class="doc-cli" style="width:100%"><div><small>Total estimado</small><span class="num">${money(r.doc.total)}</span></div><div><small>Estado del pago</small><span>Sin cobro · modo demostración</span></div><div><small>Registro</small><span>${r.where === "db" ? "Recibida por el sistema de la empresa" : "Guardada en este navegador"}</span></div></div>
+      <div class="form-status ${r.where === "db" ? "ok" : "warn"}" style="width:100%">${r.where === "db" ? I.ok : I.warn}<span>${r.where === "db" ? "El equipo comercial verá su solicitud en el panel administrativo y lo contactará para confirmar." : "Para que su solicitud llegue a la empresa, envíela por WhatsApp o comparta el PDF."} No se ha realizado ningún cargo.</span></div>
+    </div>`;
+    f.innerHTML = `<a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="${waLink(docWAText(r.doc))}">Enviar por WhatsApp</a><button class="btn btn-line btn-sm" id="chk-doc">Ver documento</button><button class="btn btn-primary btn-sm" data-close>Listo</button>`;
+  }
+}
+$("#chk-foot").addEventListener("click", async e => {
+  const k = state.chk, id = e.target.closest("button")?.id;
+  if (id === "chk-back") { k.step--; renderCheckout(); }
+  if (id === "chk-next") {
+    if (k.step === 0) {
+      if (!validate([[$("#x-nombre"), reqd("su nombre")], [$("#x-email"), vEmail], [$("#x-tel"), vTel(true)], [$("#x-lugar"), reqd("el lugar de ejecución")]])) return;
+      k.cli = {nombre:$("#x-nombre").value.trim(), empresa:$("#x-empresa").value.trim(), nit:$("#x-nit").value.trim(), email:$("#x-email").value.trim(), tel:$("#x-tel").value.trim(), lugar:$("#x-lugar").value.trim()};
+    } else if (k.step === 1) {
+      k.gw = ($("input[name=gw]:checked") || {}).value || "wompi"; k.medio = ($("input[name=medio]:checked") || {}).value || "pse";
+    }
+    k.step++; renderCheckout(); $("#checkout").scrollTop = 0;
+  }
+  if (id === "chk-send") {
+    e.target.disabled = true; e.target.textContent = "Enviando…";
+    const lines = cartLines(), gw = GW.find(g => g.id === k.gw), md = MED.find(m => m.id === k.medio);
+    const doc = {tipo:"Solicitud de alquiler", ref:newRef("MTZV"), fecha:new Date().toISOString(), cliente:k.cli, lineas:lines, ...totals(lines), metodo:`${md.n} vía ${gw.n} (demostración)`};
+    const where = await saveSolicitud({...doc, tipoReg:"pedido", estado:"nuevo", pago:"sin_cobro_demo"});
+    k.result = {doc, where}; state.cart = []; saveCart(); k.step = 3; renderCheckout();
+  }
+  if (id === "chk-doc") { closeDlg("#checkout"); openQuoteDoc(k.result.doc); }
+});
+
+/* ---------- Diálogos ---------- */
+function openDlg(sel) { const d = $(sel); if (!d.open) { try { d.showModal(); } catch { d.setAttribute("open", ""); } } }
+function closeDlg(sel) { const d = $(sel); if (d.open) d.close(); }
+$$("dialog").forEach(d => {
+  d.addEventListener("click", e => { if (e.target === d) d.close(); if (e.target.closest("[data-close]")) d.close(); });
+});
+
+/* ---------- Delegación global ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-detail],[data-quote],[data-rates],[data-cat],[data-gcat],[data-go],[data-g],#go-checkout,#dl-pdf");
+  if (!t) return;
+  if (t.dataset.detail) { e.preventDefault(); openDetail(t.dataset.detail); }
+  else if (t.dataset.quote) { closeDlg("#detail"); $("#q-svc").value = t.dataset.quote; if (!state.cart.length) { $("#q-cant").value = 1; } updateWA(); location.hash = ""; document.getElementById("cotizacion").scrollIntoView(); setTimeout(() => $("#q-nombre").focus({preventScroll:true}), 400); }
+  else if (t.dataset.rates) { closeDlg("#detail"); setCalc({sid:t.dataset.rates}); document.getElementById("tarifas").scrollIntoView(); }
+  else if (t.dataset.cat) { state.cat = t.dataset.cat; $$("#cat-chips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.cat === state.cat)); renderCatalog(); }
+  else if (t.dataset.gcat) { state.gcat = t.dataset.gcat; filterGallery(); }
+  else if (t.dataset.go) { closeDlg("#cart"); document.getElementById(t.dataset.go).scrollIntoView(); }
+  else if (t.dataset.g) { const g = GAL[+t.dataset.g]; const s = services().find(x => x.cat === g.cat); if (s) openDetail(s.id); }
+  else if (t.id === "go-checkout") openCheckout();
+  else if (t.id === "dl-pdf" && state.lastDoc) downloadPDF(state.lastDoc);
+});
+$("#q").addEventListener("input", e => { state.q = e.target.value; renderCatalog(); });
+$("#btn-search").addEventListener("click", () => { document.getElementById("servicios").scrollIntoView(); setTimeout(() => $("#q").focus({preventScroll:true}), 450); });
+$("#btn-cart").addEventListener("click", () => openDlg("#cart"));
+$("#btn-menu").addEventListener("click", () => { const n = $("#nav"), o = !n.classList.contains("open"); n.classList.toggle("open", o); $("#btn-menu").setAttribute("aria-expanded", o); });
+$("#nav").addEventListener("click", e => { if (e.target.closest("a")) { $("#nav").classList.remove("open"); $("#btn-menu").setAttribute("aria-expanded", "false"); } });
+$("#rt").addEventListener("click", e => { const r = e.target.closest("tr[data-row]"); if (r) setCalc({sid:r.dataset.row}); });
+$("#rt").addEventListener("keydown", e => { const r = e.target.closest("tr[data-row]"); if (r && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); setCalc({sid:r.dataset.row}); $("#c-svc").focus(); } });
+$("#c-svc").addEventListener("change", e => setCalc({sid:e.target.value}));
+$("#c-per").addEventListener("click", e => { const b = e.target.closest("[data-per]"); if (b) setCalc({per:b.dataset.per}); });
+$("#c-per").addEventListener("keydown", e => { if (!["ArrowRight","ArrowLeft"].includes(e.key)) return; const i = PKEYS.indexOf(state.calc.per) + (e.key === "ArrowRight" ? 1 : -1); setCalc({per:PKEYS[(i + 4) % 4]}); $(`#c-per [data-per="${state.calc.per}"]`).focus(); });
+$("#c-ini").addEventListener("change", e => setCalc({ini:e.target.value}));
+$("#c-fin").addEventListener("change", e => setCalc({fin:e.target.value}));
+$("#c-cant").addEventListener("change", e => setCalc({cant:e.target.value}));
+$("#c-unid").addEventListener("change", e => setCalc({unid:e.target.value}));
+$("#calc").addEventListener("click", e => { const b = e.target.closest("[data-step]"); if (b) { const k = b.dataset.step; setCalc({[k]: state.calc[k] + Number(b.dataset.d)}); } });
+$("#calc").addEventListener("submit", e => { e.preventDefault(); const k = state.calc; addToCart({sid:k.sid, per:k.per, cant:k.cant, unid:k.unid, ini:k.ini, fin:k.fin}); });
+$("#c-quote").addEventListener("click", () => { $("#q-svc").value = state.calc.sid; $("#q-cant").value = state.calc.unid; updateWA(); document.getElementById("cotizacion").scrollIntoView(); });
+
+/* Header y animaciones */
+const hdr = $("#hdr"); const onScroll = () => hdr.classList.toggle("scrolled", scrollY > 30); addEventListener("scroll", onScroll, {passive:true}); onScroll();
+const rio = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); rio.unobserve(e.target); } }), {threshold:.08}) : null;
+function observeReveal(root) { if (!rio || matchMedia("(prefers-reduced-motion: reduce)").matches) return; $$(".reveal:not(.in)", root).forEach(el => rio.observe(el)); }
+const navIO = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) $$("#nav a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }), {rootMargin:"-45% 0px -50% 0px"}) : null;
+
+/* ---------- Administración ---------- */
+const ADM = {tab:"tarifas", draft:null, sols:[], unsub:null, allowed:false};
+async function adminAllowed() {
+  const u = state.caps.user; if (!u) return false;
+  try { return (await u.isOwner()) || (await u.canEdit()); } catch { return false; }
+}
+async function openAdmin() {
+  openDlg("#admin");
+  ADM.allowed = await adminAllowed();
+  if (!ADM.allowed || !state.caps.db) {
+    $("#adm-tabs").innerHTML = "";
+    $("#adm-body").innerHTML = `<div class="restricted">${I.lock}<h3 style="font-size:1.8rem;text-transform:uppercase">Acceso restringido</h3><p>${!state.caps.db && ADM.allowed ? "La base de datos no está disponible en esta vista. Abra la página en Claude con su cuenta para administrar el sitio." : "Solo el propietario del sitio y los editores autorizados pueden administrar servicios, tarifas y solicitudes. Inicie sesión con una cuenta autorizada."}</p><button class="btn btn-dark btn-sm" data-close>Volver al sitio</button></div>`;
+    return;
+  }
+  ADM.draft = clone(cfg);
+  if (!ADM.unsub) ADM.unsub = state.caps.db.collection("solicitudes").onSnapshot(snap => {
+    ADM.sols = []; snap.docs.forEach(d => (d.data()?.items || []).forEach((it, idx) => ADM.sols.push({...it, _doc:d.id, _idx:idx})));
+    ADM.sols.sort((a, b) => String(b.fecha).localeCompare(String(a.fecha)));
+    if (ADM.tab === "solicitudes" && $("#admin").open) renderAdmin();
+  }, () => { ADM.unsub = null; });
+  renderAdmin();
+}
+const TABS = [["tarifas", "Servicios y tarifas"], ["solicitudes", "Solicitudes"], ["config", "Impuestos y contacto"], ["estado", "Estado de funciones"]];
+function renderAdmin() {
+  $("#adm-tabs").innerHTML = TABS.map(([id, n]) => `<button role="tab" aria-selected="${ADM.tab === id}" data-tab="${id}">${n}${id === "solicitudes" && ADM.sols.length ? ` (${ADM.sols.length})` : ""}</button>`).join("");
+  const B = $("#adm-body"), d = ADM.draft;
+  const saveBar = `<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end"><button class="btn btn-line btn-sm" data-adm="reset">Descartar cambios</button><button class="btn btn-primary btn-sm" data-adm="save">Guardar y publicar cambios</button></div>`;
+  if (ADM.tab === "tarifas") {
+    B.innerHTML = `<p class="hint">Los cambios se aplican en el sitio para todos los visitantes al guardar. Valores en COP antes de impuestos.</p>` + META.map(m => { const s = d.servicios[m.id]; return `
+      <div class="adm-card" data-svc="${m.id}">
+        <div class="adm-svc">
+          <div style="display:grid;gap:8px;align-content:start">${s.img ? `<div class="media"><img src="${esc(s.img)}" alt=""></div>` : `<div class="media">${sceneCanvas(m.scene, m.seed)}<span class="illus">Ilustración</span></div>`}
+            ${state.caps.assets ? `<label class="btn btn-line btn-sm" style="cursor:pointer">Cargar fotografía<input type="file" accept="image/*" data-up="${m.id}" hidden></label>` : `<span class="hint">La carga de fotografías requiere permisos de editor.</span>`}
+            ${s.img ? `<button class="rm" data-adm="noimg" data-id="${m.id}">Quitar fotografía</button>` : ""}</div>
+          <div style="display:grid;gap:12px;min-width:0">
+            <label class="field"><span>Nombre del servicio</span><input data-k="nombre" value="${esc(s.nombre)}"></label>
+            <label class="field"><span>Descripción</span><textarea data-k="desc" style="min-height:70px">${esc(s.desc)}</textarea></label>
+            <div class="adm-rates">${PKEYS.map(p => `<label class="field"><span>Por ${PER[p].one}</span><input data-k="${p}" type="number" min="0" step="1000" value="${Number(s[p]) || 0}"></label>`).join("")}</div>
+            <label class="switch"><input type="checkbox" data-k="activo" ${s.activo !== false ? "checked" : ""}> Visible en el sitio</label>
+          </div>
+        </div>
+      </div>`; }).join("") + saveBar;
+    mountScenes(B);
+  } else if (ADM.tab === "config") {
+    const k = d.contacto;
+    const f = (key, label, ph = "") => `<label class="field"><span>${label}</span><input data-c="${key}" value="${esc(k[key])}" placeholder="${ph}"></label>`;
+    B.innerHTML = `<div class="adm-card"><h3>Impuestos</h3>
+        <label class="switch"><input type="checkbox" id="a-iva" ${d.impuestos.aplica ? "checked" : ""}> Calcular IVA sobre los valores estimados</label>
+        <label class="field" style="max-width:200px"><span>Tarifa de IVA (%)</span><input id="a-tasa" type="number" min="0" max="100" step="0.5" value="${d.impuestos.tasa}"></label>
+        <p class="hint">Confirme con su contador la configuración tributaria aplicable a cada servicio. Retenciones y otros tributos no se calculan en el sitio.</p></div>
+      <div class="adm-card"><h3>Datos de contacto</h3><div class="form" style="border:0;padding:0"><div class="grid">
+        ${f("whatsapp", "WhatsApp (con indicativo)", "57 300 000 0000")}${f("telefono", "Teléfono", "+57 …")}${f("email", "Correo corporativo", "comercial@…")}${f("direccion", "Ubicación / dirección", "Ciudad, dirección")}${f("horario", "Horario de atención", "Lunes a viernes, …")}${f("facebook", "Facebook (URL)", "https://…")}${f("instagram", "Instagram (URL)", "https://…")}${f("linkedin", "LinkedIn (URL)", "https://…")}
+      </div></div></div>` + saveBar;
+  } else if (ADM.tab === "solicitudes") {
+    const tipo = {cotizacion:"Cotización", pedido:"Pedido", contacto:"Contacto"};
+    B.innerHTML = `<div class="adm-card"><h3>Solicitudes recibidas</h3>
+      ${ADM.sols.length ? `<div class="st-tbl"><table><thead><tr><th>Fecha</th><th>Tipo · Ref.</th><th>Cliente</th><th>Detalle</th><th>Total est.</th><th>Estado</th></tr></thead><tbody>
+      ${ADM.sols.map((s, i) => `<tr><td class="mono">${esc(new Date(s.fecha).toLocaleString("es-CO", {dateStyle:"short", timeStyle:"short"}))}</td>
+        <td><b>${tipo[s.tipoReg] || "—"}</b><br><span class="mono" style="font-size:.8rem">${esc(s.ref)}</span></td>
+        <td>${esc(s.cliente?.nombre)}${s.cliente?.empresa ? `<br><small>${esc(s.cliente.empresa)}</small>` : ""}<br><small>${esc(s.cliente?.email)} · ${esc(s.cliente?.tel)}</small></td>
+        <td>${(s.lineas || []).map(l => esc(l.servicio) + ` (${l.cant}×${l.unid})`).join("<br>") || esc((s.cliente?.obs || "").slice(0, 120))}${s.cliente?.lugar ? `<br><small>Lugar: ${esc(s.cliente.lugar)}</small>` : ""}</td>
+        <td class="mono">${s.total ? money(s.total) : "—"}</td>
+        <td><select data-sol="${i}" aria-label="Estado de ${esc(s.ref)}">${["nuevo", "en gestión", "cotizado", "cerrado"].map(x => `<option ${s.estado === x ? "selected" : ""}>${x}</option>`).join("")}</select>
+        ${s.lineas?.length ? `<br><button class="rm" data-adm="doc" data-i="${i}">Ver documento</button>` : ""}</td></tr>`).join("")}
+      </tbody></table></div>` : `<p>Todavía no hay solicitudes. Aparecerán aquí cuando un visitante con acceso registre una cotización, un pedido o un mensaje.</p>`}</div>`;
+  } else {
+    const row = (f, s, n) => `<tr><td>${f}</td><td>${s ? '<span class="pill okp">Operativo</span>' : '<span class="pill demo">Requiere configuración</span>'}</td><td>${n}</td></tr>`;
+    B.innerHTML = `<div class="adm-card"><h3>Estado de funciones</h3><div class="st-tbl"><table><thead><tr><th>Función</th><th>Estado</th><th>Notas</th></tr></thead><tbody>
+      ${row("Catálogo, buscador y filtros", 1, "Funciona en todos los dispositivos.")}
+      ${row("Calculadora de tarifas", 1, "Calcula por hora, día, semana o mes, con fechas, cantidades y equipos.")}
+      ${row("Carrito de compras", 1, "Se conserva en el navegador del visitante durante la navegación.")}
+      ${row("Cálculo de IVA", 1, "Tarifa configurable en “Impuestos y contacto”.")}
+      ${row("Cotización formal y PDF", 1, "Se genera en el navegador; la descarga requiere abrir la página en Claude.")}
+      ${row("WhatsApp con resumen", !!waNumber(), waNumber() ? "Número configurado." : "Funciona sin número (el visitante elige el contacto). Configure el número para enviar directo a la empresa.")}
+      ${row("Registro de solicitudes y panel", 1, "Recibe solicitudes de visitantes con acceso de colaborador o superior. Los visitantes públicos guardan en su navegador y envían por WhatsApp. Para tráfico público se requiere un servidor propio.")}
+      ${row("Edición de tarifas, servicios y fotografías", 1, "Desde este panel, solo propietario y editores.")}
+      ${row("Pasarelas Wompi, Mercado Pago, PayU", 0, "Flujo en modo demostración. Requiere cuentas comerciales, llaves públicas y privadas, y un servidor que verifique los pagos por webhook.")}
+      ${row("PSE, tarjetas, Nequi y transferencia", 0, "Dependen de la pasarela elegida. Datos bancarios para transferencia pendientes.")}
+      ${row("Notificaciones por correo", 0, "Requiere un servicio de envío de correo en el servidor.")}
+      ${row("Control de disponibilidad", 0, "Requiere inventario de equipos y calendario de reservas en base de datos.")}
+      ${row("Datos de contacto y redes", Object.values(cfg.contacto).some(Boolean), "Complete los datos en “Impuestos y contacto”.")}
+      </tbody></table></div></div>`;
+  }
+}
+$("#adm-tabs").addEventListener("click", e => { const t = e.target.closest("[data-tab]"); if (t) { ADM.tab = t.dataset.tab; renderAdmin(); } });
+$("#adm-body").addEventListener("input", e => {
+  const d = ADM.draft; if (!d) return;
+  const card = e.target.closest("[data-svc]");
+  if (card && e.target.dataset.k) { const s = d.servicios[card.dataset.svc], k = e.target.dataset.k; s[k] = k === "activo" ? e.target.checked : PKEYS.includes(k) ? Math.max(0, Number(e.target.value) || 0) : e.target.value; }
+  if (e.target.dataset.c) d.contacto[e.target.dataset.c] = e.target.value.trim();
+  if (e.target.id === "a-iva") d.impuestos.aplica = e.target.checked;
+  if (e.target.id === "a-tasa") d.impuestos.tasa = Math.max(0, Math.min(100, Number(e.target.value) || 0));
+});
+$("#adm-body").addEventListener("change", async e => {
+  if (e.target.matches("[data-k=activo],#a-iva")) e.target.dispatchEvent(new Event("input", {bubbles:true}));
+  const up = e.target.dataset.up;
+  if (up && e.target.files[0]) {
+    const file = e.target.files[0]; if (!/^image\//.test(file.type)) { toast("Seleccione un archivo de imagen.", true); return; }
+    toast("Cargando fotografía…");
+    try { const r = await state.caps.assets.upload(file); ADM.draft.servicios[up].img = r.url; ADM.draft.servicios[up].imgId = r.id; renderAdmin(); toast("Fotografía cargada. Guarde para publicarla."); }
+    catch (err) { toast("No se pudo cargar la fotografía (máximo 20 MB).", true); }
+  }
+  const si = e.target.dataset.sol;
+  if (si !== undefined) {
+    const s = ADM.sols[+si]; e.target.disabled = true;
+    try { const ref = state.caps.db.doc("solicitudes/" + s._doc); const snap = await ref.get(); const items = (snap.data()?.items || []).map(x => x.ref === s.ref ? {...x, estado:e.target.value} : x); await ref.set({...snap.data(), items}); toast(`Estado de ${s.ref} actualizado.`); }
+    catch { toast("No se pudo actualizar el estado.", true); }
+    e.target.disabled = false;
+  }
+});
+$("#adm-body").addEventListener("click", async e => {
+  const b = e.target.closest("[data-adm]"); if (!b) return;
+  const a = b.dataset.adm;
+  if (a === "reset") { ADM.draft = clone(cfg); renderAdmin(); toast("Cambios descartados."); }
+  if (a === "noimg") { ADM.draft.servicios[b.dataset.id].img = ""; ADM.draft.servicios[b.dataset.id].imgId = ""; renderAdmin(); }
+  if (a === "doc") { const s = ADM.sols[+b.dataset.i]; openQuoteDoc({...s, tipo: s.tipoReg === "pedido" ? "Solicitud de alquiler" : "Cotización"}); }
+  if (a === "save") {
+    b.disabled = true; b.textContent = "Guardando…";
+    try { await state.caps.db.doc("config/sitio").set({...ADM.draft, actualizado:new Date().toISOString()}); toast("Cambios publicados en el sitio."); }
+    catch { toast("No se pudieron guardar los cambios. Verifique sus permisos de editor.", true); }
+    b.disabled = false; b.textContent = "Guardar y publicar cambios";
+  }
+});
+$("#open-admin").addEventListener("click", openAdmin);
+
+/* ---------- Arranque ---------- */
+function renderAll() { renderStatic(); renderCatalog(); renderRates(); renderGallery(); renderContact(); renderCartAll(); observeReveal(document); }
+renderAll();
+$$("main section[id]").forEach(s => navIO && navIO.observe(s));
+if (location.hash === "#admin") setTimeout(openAdmin, 300);
+(async () => {
+  const [user, db, downloads, assets] = await Promise.all([use("user"), use("db"), use("downloads"), use("assets")]);
+  Object.assign(state.caps, {user, db, downloads, assets});
+  if (user) { try { state.caps.uid = await user.id(); } catch {} }
+  if (db) {
+    db.doc("config/sitio").onSnapshot(snap => {
+      if (!snap.exists) return;
+      const data = snap.data(); cfg = merge(DEFAULTS, {servicios:data.servicios, impuestos:data.impuestos, contacto:data.contacto});
+      if (!META.some(m => m.id === state.calc.sid && svc(m.id).activo !== false)) state.calc.sid = services()[0]?.id || "maquinaria";
+      renderStatic(); renderCatalog(); renderRates(); renderContact(); renderCartAll(); observeReveal(document);
+    }, () => {});
+  }
+})();
+})();
+</script>
+
+</body>
+</html>
